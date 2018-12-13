@@ -7,11 +7,12 @@ This repository stores a test to demonstrate skills mainly with [Python], [Keras
   * [PYTHON VIRTUAL ENVIRONMENT](#python-virtual-environment)
 * [REPOSITORY CONTENT](#repository-content)
 * [ARCHITECTURE](#architecture)
-  * [HOW TO RUN DEEPLEARNING ON FLASK WITH DOCKER COMPOSE](#how-to-run-deeplearning-on-flask-with-docker-compose)
+* [HOW TO RUN DEEPLEARNING ON FLASK WITH DOCKER COMPOSE](#how-to-run-deeplearning-on-flask-with-docker-compose)
+* [TEST SERVER & REST API](#test-server--rest-api)
 
 ## PURPOSE
 
-The goal is to deploy on [Flask] a [deep learning] model as a microservice. The model is used to predict handwritten digits and it has been previously trained on a [Jupyter Notebook]. [REST API] are utilized to communicate with the deployed model. e.g. send images to be analized, return the generated predictions to the client.
+The goal is to deploy on [Flask] a [deep learning] model as a microservice. The model is used to predict handwritten digits and it has been previously trained on a [Jupyter Notebook]. [REST API] are utilized to communicate with the deployed model. e.g. send image to be analized and return the generated predictions to the client.
 
 ## DEPENDENCIES
 
@@ -59,7 +60,8 @@ deeplearning_flask
 ├── requirements.txt
 ├── server.py
 ├── static
-│   └── 4.jpg
+│   ├── 4.jpg
+│   └── index.jpg
 └── templates
     └── index.html
 ```
@@ -81,7 +83,7 @@ Client <──>| NGINX ├<─bridge─>| Flask + Gunicorn |
             ¯¯¯¯¯¯¯            ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
 ```
 
-### HOW TO RUN DEEPLEARNING ON FLASK WITH DOCKER COMPOSE
+## HOW TO RUN DEEPLEARNING ON FLASK WITH DOCKER COMPOSE
 
 The steps and commands to run the [deep learning] model on the [Flask] server with [docker-compose] are described below.
 
@@ -105,6 +107,8 @@ If everything goes fine at the end it should appear something similar to:
 api_1_9b6c64fc338e | Using TensorFlow backend.
 ```
 
+## TEST SERVER & REST API
+
 There are different ways to check that the server is running properly. One is opening a web browser such as Chrome or Mozilla and paste the following URL:
 
 ```bash
@@ -115,7 +119,7 @@ The web browser should show something similar to:
 
 ![index](static/index.jpg)
 
-[REST API] can be tested with [curl] or requests.
+[REST API] can be tested with [curl] or [requests].
 
 POST example using [curl]:
 
@@ -187,3 +191,4 @@ POST example using [curl]:
 [Matplotlib]: https://matplotlib.org/
 [NumPy]: http://www.numpy.org/
 [curl]: https://curl.haxx.se/
+[requests]: http://docs.python-requests.org/en/master/
