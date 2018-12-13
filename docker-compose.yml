@@ -1,0 +1,28 @@
+version: "3.7"
+
+services:
+  api:
+    build: .
+    volumes:
+      - static_volume:/api/static
+    networks:
+      - nginx_network
+
+  nginx:
+    image: nginx:1.15.7-alpine
+    ports:
+      - 80:80
+    volumes:
+      - ./nginx/conf.d:/etc/nginx/conf.d
+      - static_volume:/api/static
+    depends_on:
+      - api
+    networks:
+      - nginx_network
+
+networks:
+  nginx_network:
+    driver: bridge
+
+volumes:
+  static_volume:
