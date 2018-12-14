@@ -1,3 +1,10 @@
+"""
+server.py: Flask server with Deep Learning model based on Keras.
+"""
+
+__author__      = "alvertogit"
+__copyright__   = "Copyright 2018"
+
 from flask import Flask, render_template, jsonify, request
 from keras.models import load_model
 from skimage import transform, util
