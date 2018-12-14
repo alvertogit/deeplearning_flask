@@ -48,23 +48,25 @@ Codetest main folder contains:
 
 ```bash
 deeplearning_flask
-├── api_test.py
+├── api
+│   ├── mnist_model.h5
+│   ├── server.py
+│   ├── static
+│   │   ├── 4.jpg
+│   │   └── index.jpg
+│   ├── templates
+│   │   └── index.html
+│   └── tests
+│       └── test.py
 ├── Deep Learning MNIST prediction model with Keras.ipynb
 ├── dlflask36.yaml
 ├── docker-compose.yml
 ├── Dockerfile
-├── mnist_model.h5
 ├── nginx
 │   └── conf.d
 │       └── local.conf
 ├── README.md
-├── requirements.txt
-├── server.py
-├── static
-│   ├── 4.jpg
-│   └── index.jpg
-└── templates
-    └── index.html
+└── requirements.txt
 ```
 
 ## ARCHITECTURE
@@ -116,33 +118,31 @@ There are different ways to check that the server is running properly. One is op
 http://127.0.0.1/
 ```
 
-The web browser should show something similar to:
-
-![index](static/index.jpg)
+The web browser should show the index webpage.
 
 [REST API] can be tested with [requests] or [curl].
 
 There is a [REST API] test example **test.py** using [requests]:
 
 ```bash
-(dlflask36)~/deeplearning_flask$ python test.py
+(dlflask36)~/deeplearning_flask/tests$ python test.py
 most probable label: 4
-label 0 probability: 0.0000
-label 1 probability: 0.0000
-label 2 probability: 0.0000
-label 3 probability: 0.0000
-label 4 probability: 0.9998
-label 5 probability: 0.0000
-label 6 probability: 0.0000
-label 7 probability: 0.0001
-label 8 probability: 0.0000
-label 9 probability: 0.0000
+label 0 probability: 1.39205625e-08
+label 1 probability: 7.594903e-06
+label 2 probability: 1.0523713e-05
+label 3 probability: 1.5430503e-07
+label 4 probability: 0.9998229
+label 5 probability: 6.46276e-08
+label 6 probability: 1.6907163e-06
+label 7 probability: 0.000120392964
+label 8 probability: 2.129367e-05
+label 9 probability: 1.5358128e-05
 ```
 
 A POST example using [curl] is shown below:
 
 ```bash
-~/deeplearning_flask$ curl -F image=@static/4.jpg -X POST 'http://127.0.0.1/predictlabel'
+~/deeplearning_flask$ curl -F image=@api/static/4.jpg -X POST 'http://127.0.0.1/predictlabel'
 {
   "most_probable_label": "4",
   "predictions": [

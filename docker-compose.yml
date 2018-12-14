@@ -1,7 +1,7 @@
 version: "3.7"
 
 services:
-  api:
+  web:
     build: .
     volumes:
       - static_volume:/api/static
@@ -14,9 +14,9 @@ services:
       - 80:80
     volumes:
       - ./nginx/conf.d:/etc/nginx/conf.d
-      - static_volume:/api/static
+      - static_volume:/api/static:ro
     depends_on:
-      - api
+      - web
     networks:
       - nginx_network
 
