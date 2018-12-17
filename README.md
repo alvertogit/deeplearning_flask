@@ -7,7 +7,7 @@ This repository stores a test to demonstrate skills mainly with [Python], [Keras
   * [PYTHON VIRTUAL ENVIRONMENT](#python-virtual-environment)
 * [REPOSITORY CONTENT](#repository-content)
 * [ARCHITECTURE](#architecture)
-* [HOW TO RUN DEEPLEARNING ON FLASK WITH DOCKER COMPOSE](#how-to-run-deeplearning-on-flask-with-docker-compose)
+* [HOW TO RUN DEEP LEARNING ON FLASK WITH DOCKER COMPOSE](#how-to-run-deep-learning-on-flask-with-docker-compose)
 * [TEST SERVER & REST API](#test-server--rest-api)
 
 ## PURPOSE
@@ -27,7 +27,7 @@ The code has been tested using:
 * [Keras] (2.2.4): a high-level neural networks [API], written in [Python] and capable of running on top of [TensorFlow], CNTK, or Theano.
 * [Tensorflow] (1.12.0): an open source software [Deep Learning] library for high performance numerical computation using data flow graphs.
 * [Matplotlib] (2.2.3): a plotting library for [Python] and its numerical mathematics extension [NumPy].
-* [NumPy] (1.14.6): a library for [Python], adding support for large, multi-dimensional arrays and matrices, along with a large collection of high-level mathematical functions to operate on these arrays.
+* [NumPy] (1.15.4): a library for [Python], adding support for large, multi-dimensional arrays and matrices, along with a large collection of high-level mathematical functions to operate on these arrays.
 * [Conda] (4.5.11): a package and virtual environment manager included in [Python] Data Science Platform [Anaconda].
 
 ### PYTHON VIRTUAL ENVIRONMENT
@@ -42,9 +42,17 @@ Command to configure virtual environment with [Conda]:
 (dlflask36)~/deeplearning_flask$
 ```
 
+Command to configure virtual environment with [virtualenv]:
+
+```bash
+~/deeplearning_flask$ make install
+~/deeplearning_flask$ source dlflask36/bin/activate
+(dlflask36)~/deeplearning_flask$
+```
+
 ## REPOSITORY CONTENT
 
-Codetest main folder contains:
+The repository main folder contains:
 
 ```bash
 deeplearning_flask
@@ -52,21 +60,21 @@ deeplearning_flask
 │   ├── mnist_model.h5
 │   ├── server.py
 │   ├── static
-│   │   ├── 4.jpg
-│   │   └── index.jpg
-│   ├── templates
-│   │   └── index.html
-│   └── tests
-│       └── test.py
+│   │   └── 4.jpg
+│   └── templates
+│       └── index.html
 ├── Deep Learning MNIST prediction model with Keras.ipynb
 ├── dlflask36.yaml
 ├── docker-compose.yml
 ├── Dockerfile
+├── Makefile
 ├── nginx
 │   └── conf.d
 │       └── local.conf
 ├── README.md
-└── requirements.txt
+├── requirements.txt
+└── system_test
+    └── test.py
 ```
 
 ## ARCHITECTURE
@@ -86,7 +94,7 @@ Client <──>| NGINX ├<─bridge─>| Flask + Gunicorn |
             ¯¯¯¯¯¯¯            ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
 ```
 
-## HOW TO RUN DEEPLEARNING ON FLASK WITH DOCKER COMPOSE
+## HOW TO RUN DEEP LEARNING ON FLASK WITH DOCKER COMPOSE
 
 The steps and commands to run the [deep learning] model on the [Flask] server with [docker-compose] are described below.
 
@@ -107,7 +115,7 @@ If everything goes fine at the end it should appear something similar to:
 ```bash
 ...
 ...
-api_1_9b6c64fc338e | Using TensorFlow backend.
+web_1_9b6c64fc338e | Using TensorFlow backend.
 ```
 
 ## TEST SERVER & REST API
@@ -122,21 +130,12 @@ The web browser should show the index webpage.
 
 [REST API] can be tested with [requests] or [curl].
 
-There is a [REST API] test example **test.py** using [requests]:
+It is possible to execute a system test **system_test/test.py** using [pytest] and [requests]:
 
 ```bash
-(dlflask36)~/deeplearning_flask/tests$ python test.py
-most probable label: 4
-label 0 probability: 1.39205625e-08
-label 1 probability: 7.594903e-06
-label 2 probability: 1.0523713e-05
-label 3 probability: 1.5430503e-07
-label 4 probability: 0.9998229
-label 5 probability: 6.46276e-08
-label 6 probability: 1.6907163e-06
-label 7 probability: 0.000120392964
-label 8 probability: 2.129367e-05
-label 9 probability: 1.5358128e-05
+~/deeplearning_flask$ make install
+...
+~/deeplearning_flask$ make test
 ```
 
 A POST example using [curl] is shown below:
@@ -209,4 +208,5 @@ A POST example using [curl] is shown below:
 [Matplotlib]: https://matplotlib.org/
 [NumPy]: http://www.numpy.org/
 [curl]: https://curl.haxx.se/
+[pytest]: https://docs.pytest.org/en/latest/
 [requests]: http://docs.python-requests.org/en/master/
