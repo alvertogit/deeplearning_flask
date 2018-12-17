@@ -200,6 +200,7 @@ A POST example using [curl] is shown below:
 [REST API]: https://en.wikipedia.org/wiki/Representational_state_transfer
 [Docker-Compose]: https://github.com/docker/compose
 [Conda]: https://conda.io/docs/index.html
+[virtualenv]: https://virtualenv.pypa.io/en/stable/
 [Anaconda]: https://www.anaconda.com/
 [Jupyter Notebook]: http://jupyter.org/
 [Deep Learning]: https://en.wikipedia.org/wiki/Deep_learning
