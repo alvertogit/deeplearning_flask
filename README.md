@@ -23,11 +23,12 @@ The code has been tested using:
 * [Gunicorn] (19.9.0): a [Python] [WSGI] HTTP Server for UNIX.
 * [NGINX] (1.15.7): a free, open-source, high-performance HTTP server, reverse proxy, and IMAP/POP3 proxy server.
 * [Docker] (18.09.0-ce): an open platform for developers and sysadmins to build, ship, and run distributed applications, whether on laptops, data center VMs, or the cloud.
-* [Docker-Compose] (1.23.1): a tool for defining and running multi-container [Docker] applications.
+* [Docker-Compose] (1.23.2): a tool for defining and running multi-container [Docker] applications.
 * [Keras] (2.2.4): a high-level neural networks [API], written in [Python] and capable of running on top of [TensorFlow], CNTK, or Theano.
 * [Tensorflow] (1.12.0): an open source software [Deep Learning] library for high performance numerical computation using data flow graphs.
-* [Matplotlib] (2.2.3): a plotting library for [Python] and its numerical mathematics extension [NumPy].
+* [Matplotlib] (3.0.2): a plotting library for [Python] and its numerical mathematics extension [NumPy].
 * [NumPy] (1.15.4): a library for [Python], adding support for large, multi-dimensional arrays and matrices, along with a large collection of high-level mathematical functions to operate on these arrays.
+* [scikit-image] (0.14.1): a collection of algorithms for image processing with [Python].
 * [Conda] (4.5.11): a package and virtual environment manager included in [Python] Data Science Platform [Anaconda].
 
 ### PYTHON VIRTUAL ENVIRONMENT
@@ -208,6 +209,7 @@ A POST example using [curl] is shown below:
 [Tensorflow]: https://www.tensorflow.org/
 [Matplotlib]: https://matplotlib.org/
 [NumPy]: http://www.numpy.org/
+[scikit-image]: https://scikit-image.org/
 [curl]: https://curl.haxx.se/
 [pytest]: https://docs.pytest.org/en/latest/
 [requests]: http://docs.python-requests.org/en/master/
