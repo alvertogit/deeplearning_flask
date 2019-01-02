@@ -1,32 +1,24 @@
 """
-server.py: Flask server with Deep Learning model based on Keras.
+views.py: api views used by Flask server.
 """
 
-__author__      = "alvertogit"
-__copyright__   = "Copyright 2018"
+__author__      = "alverto"
+__copyright__   = "Copyright 2019"
 
-from flask import Flask, render_template, jsonify, request
-from keras.models import load_model
-from skimage import transform, util
+
+from flask import jsonify, request
+
 from skimage.io import imread
-import numpy as np
-import os, io
+import io
 
-app = Flask(__name__)
-model = load_model('mnist_model.h5')
-model._make_predict_function()
+from . import api
 
-def preprocess_image(image):
-    # invert grayscale image
-    image = util.invert(image)
-    # resize and reshape image for model
-    image = transform.resize(image, (28,28), anti_aliasing=True, mode="constant")
-    image = np.array(image)
-    image = image.reshape((1,28*28))
+import sys
+sys.path.append("..")
 
-    return image
+from model import *
 
-@app.route("/predictlabel", methods=["POST"])
+@api.route("/predictlabel", methods=["POST"])
 def predict():
     # result dictionary that will be returned from the view
     result = {"success": False}
@@ -42,6 +34,7 @@ def predict():
             preprocessed_image = preprocess_image(image)
 
             # classify the input image generating a list of predictions
+            model = current_app.config["model"]
             preds = model.predict(preprocessed_image)
             
             # add generated predictions to result
@@ -58,11 +51,3 @@ def predict():
 
     # return result dictionary as JSON response to client
     return jsonify(result)
-
-
-@app.route('/')
-def index():
-    return render_template('index.html')
-
-if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=5000, debug=False)

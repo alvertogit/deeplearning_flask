@@ -3,8 +3,10 @@ version: "3.7"
 services:
   web:
     build: .
+    env_file:
+      - .env.example
     volumes:
-      - static_volume:/api/static
+      - static_volume:/app/static
     networks:
       - nginx_network
 
@@ -14,7 +16,7 @@ services:
       - 80:80
     volumes:
       - ./nginx/conf.d:/etc/nginx/conf.d
-      - static_volume:/api/static:ro
+      - static_volume:/app/static:ro
     depends_on:
       - web
     networks:

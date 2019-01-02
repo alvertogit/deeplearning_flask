@@ -29,7 +29,7 @@ The code has been tested using:
 * [Matplotlib] (3.0.2): a plotting library for [Python] and its numerical mathematics extension [NumPy].
 * [NumPy] (1.15.4): a library for [Python], adding support for large, multi-dimensional arrays and matrices, along with a large collection of high-level mathematical functions to operate on these arrays.
 * [scikit-image] (0.14.1): a collection of algorithms for image processing with [Python].
-* [Conda] (4.5.11): a package and virtual environment manager included in [Python] Data Science Platform [Anaconda].
+* [Conda] (4.5.12): a package and virtual environment manager included in [Python] Data Science Platform [Anaconda].
 
 ### PYTHON VIRTUAL ENVIRONMENT
 
@@ -57,13 +57,20 @@ The repository main folder contains:
 
 ```bash
 deeplearning_flask
-├── api
+├── app
+│   ├── api
+│   │   ├── __init__.py
+│   │   └── views.py
+│   ├── config.py
+│   ├── __init__.py
 │   ├── mnist_model.h5
+│   ├── model.py
 │   ├── server.py
 │   ├── static
 │   │   └── 4.jpg
 │   └── templates
 │       └── index.html
+├── .env.example
 ├── Deep Learning MNIST prediction model with Keras.ipynb
 ├── dlflask36.yaml
 ├── docker-compose.yml
@@ -142,7 +149,7 @@ It is possible to execute a system test **system_test/test.py** using [pytest] a
 A POST example using [curl] is shown below:
 
 ```bash
-~/deeplearning_flask$ curl -F image=@api/static/4.jpg -X POST 'http://127.0.0.1/predictlabel'
+~/deeplearning_flask$ curl -F image=@app/static/4.jpg -X POST 'http://127.0.0.1/api/predictlabel'
 {
   "most_probable_label": "4",
   "predictions": [

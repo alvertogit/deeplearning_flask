@@ -11,7 +11,7 @@
    <P><img src="{{ url_for('static',filename="4.jpg")}}"></P>
    <P>The value of the digit that can be predicted using a Deep Learning model.</P>
    <P>POST example using curl:</P>
-   <P>curl -F image=@api/static/4.jpg -X POST 'http://127.0.0.1/predictlabel'</P>
+   <P>curl -F image=@app/static/4.jpg -X POST 'http://127.0.0.1/api/predictlabel'</P>
    <P>{
          "most_probable_label": "4", 
          "predictions": [
