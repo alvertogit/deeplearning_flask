@@ -1,5 +1,5 @@
 """
-views.py: api views used by Flask server.
+api.py: api views used by Flask server.
 """
 
 __author__      = "alverto"
@@ -11,12 +11,16 @@ from flask import jsonify, request
 from skimage.io import imread
 import io
 
-from . import api
+#from . import api
 
-import sys
-sys.path.append("..")
+# import sys
+# sys.path.append("..")
 
 from model import *
+
+from flask import Blueprint
+
+api = Blueprint('api', __name__)
 
 @api.route("/predictlabel", methods=["POST"])
 def predict():

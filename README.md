@@ -58,11 +58,9 @@ The repository main folder contains:
 ```bash
 deeplearning_flask
 ├── app
-│   ├── api
-│   │   ├── __init__.py
-│   │   └── views.py
-│   ├── config.py
 │   ├── __init__.py
+│   ├── api.py
+│   ├── config.py
 │   ├── mnist_model.h5
 │   ├── model.py
 │   ├── server.py
@@ -81,7 +79,7 @@ deeplearning_flask
 │       └── local.conf
 ├── README.md
 ├── requirements.txt
-└── system_test
+└── tests
     └── test.py
 ```
 
