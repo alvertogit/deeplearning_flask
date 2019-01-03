@@ -18,7 +18,7 @@ The goal is to deploy on [Flask] a [deep learning] model as a microservice. The 
 
 The code has been tested using:
 
-* [Python] (3.6.7): an interpreted high-level programming language for general-purpose programming.
+* [Python] (3.6.8): an interpreted high-level programming language for general-purpose programming.
 * [Flask] (1.0.2): a microframework for [Python] based on Werkzeug, Jinja 2 and good intentions.
 * [Gunicorn] (19.9.0): a [Python] [WSGI] HTTP Server for UNIX.
 * [NGINX] (1.15.7): a free, open-source, high-performance HTTP server, reverse proxy, and IMAP/POP3 proxy server.

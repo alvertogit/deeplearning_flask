@@ -6,19 +6,13 @@ __author__      = "alverto"
 __copyright__   = "Copyright 2019"
 
 
-from flask import jsonify, request
+from flask import Blueprint, jsonify, request
 
 from skimage.io import imread
 import io
 
-#from . import api
-
-# import sys
-# sys.path.append("..")
-
 from model import *
 
-from flask import Blueprint
 
 api = Blueprint('api', __name__)
 
