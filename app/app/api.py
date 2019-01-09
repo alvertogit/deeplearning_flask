@@ -11,7 +11,7 @@ from flask import Blueprint, jsonify, request
 from skimage.io import imread
 import io
 
-from model import *
+from .model import *
 
 
 api = Blueprint('api', __name__)

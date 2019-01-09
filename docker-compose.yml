@@ -6,17 +6,17 @@ services:
     env_file:
       - .env.example
     volumes:
-      - static_volume:/app/static
+      - static_volume:/app/app/static
     networks:
       - nginx_network
 
   nginx:
-    image: nginx:1.15.7-alpine
+    image: nginx:1.15.8-alpine
     ports:
       - 80:80
     volumes:
       - ./nginx/conf.d:/etc/nginx/conf.d
-      - static_volume:/app/static:ro
+      - static_volume:/app/app/static:ro
     depends_on:
       - web
     networks:

@@ -13,7 +13,7 @@ import requests
 def test_req():
     # server REST API endpoint url and example image path
     SERVER_URL = "http://127.0.0.1/api/predictlabel"
-    IMAGE_PATH = "../app/static/4.jpg"
+    IMAGE_PATH = "../app/app/static/4.jpg"
 
     # create payload with image for request
     image = open(IMAGE_PATH, "rb").read()

@@ -11,4 +11,4 @@ install:
 test:
 	bash -c "source dlflask36/bin/activate" \
 	&& cd tests \
-	&& pytest test.py
+	&& pytest

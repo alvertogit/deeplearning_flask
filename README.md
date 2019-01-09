@@ -21,7 +21,7 @@ The code has been tested using:
 * [Python] (3.6.8): an interpreted high-level programming language for general-purpose programming.
 * [Flask] (1.0.2): a microframework for [Python] based on Werkzeug, Jinja 2 and good intentions.
 * [Gunicorn] (19.9.0): a [Python] [WSGI] HTTP Server for UNIX.
-* [NGINX] (1.15.7): a free, open-source, high-performance HTTP server, reverse proxy, and IMAP/POP3 proxy server.
+* [NGINX] (1.15.8): a free, open-source, high-performance HTTP server, reverse proxy, and IMAP/POP3 proxy server.
 * [Docker] (18.09.0-ce): an open platform for developers and sysadmins to build, ship, and run distributed applications, whether on laptops, data center VMs, or the cloud.
 * [Docker-Compose] (1.23.2): a tool for defining and running multi-container [Docker] applications.
 * [Keras] (2.2.4): a high-level neural networks [API], written in [Python] and capable of running on top of [TensorFlow], CNTK, or Theano.
@@ -57,18 +57,19 @@ The repository main folder contains:
 
 ```bash
 deeplearning_flask
+├── .env.example
 ├── app
-│   ├── __init__.py
-│   ├── api.py
+│   ├── app
+│   │   ├── api.py
+│   │   ├── __init__.py
+│   │   ├── model.py
+│   │   ├── static
+│   │   │   └── 4.jpg
+│   │   └── templates
+│   │       └── index.html
 │   ├── config.py
 │   ├── mnist_model.h5
-│   ├── model.py
-│   ├── server.py
-│   ├── static
-│   │   └── 4.jpg
-│   └── templates
-│       └── index.html
-├── .env.example
+│   └── server.py
 ├── Deep Learning MNIST prediction model with Keras.ipynb
 ├── dlflask36.yaml
 ├── docker-compose.yml
@@ -80,7 +81,7 @@ deeplearning_flask
 ├── README.md
 ├── requirements.txt
 └── tests
-    └── test.py
+    └── test_system.py
 ```
 
 ## ARCHITECTURE
@@ -136,7 +137,7 @@ The web browser should show the index webpage.
 
 [REST API] can be tested with [requests] or [curl].
 
-It is possible to execute a system test **system_test/test.py** using [pytest] and [requests]:
+It is possible to execute a system test from outside [Docker] container using [pytest] and [requests]:
 
 ```bash
 ~/deeplearning_flask$ make install
@@ -144,10 +145,10 @@ It is possible to execute a system test **system_test/test.py** using [pytest] a
 ~/deeplearning_flask$ make test
 ```
 
-A POST example using [curl] is shown below:
+A POST example using [curl] from outside [Docker] container is shown below:
 
 ```bash
-~/deeplearning_flask$ curl -F image=@app/static/4.jpg -X POST 'http://127.0.0.1/api/predictlabel'
+~/deeplearning_flask$ curl -F image=@app/app/static/4.jpg -X POST 'http://127.0.0.1/api/predictlabel'
 {
   "most_probable_label": "4",
   "predictions": [

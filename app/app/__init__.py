@@ -9,7 +9,7 @@ __copyright__   = "Copyright 2019"
 from flask import Flask, render_template
 
 from config import config
-from model import init_model
+from .model import init_model
 
 def create_app(config_name="default"):
     """Create and configure an instance of the Flask application."""
@@ -20,7 +20,7 @@ def create_app(config_name="default"):
     with app.app_context():
         app.config["model"] = init_model()
 
-    from api import api
+    from .api import api
     app.register_blueprint(api, url_prefix='/api')
 
     @app.route('/')
