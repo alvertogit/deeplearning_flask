@@ -12,10 +12,11 @@ import sys
 
 def test_index(client):
     response = client.get("/")
+    # check response
+    assert response.status_code == 200
     assert response.data == b"Deep Learning on Flask"
 
 def test_api(client):
-
     # server REST API endpoint url and example image path
     SERVER_URL = "http://127.0.0.1:5000/api/predictlabel"
     IMAGE_PATH = "../app/static/4.jpg"
@@ -25,12 +26,13 @@ def test_api(client):
     payload = {"file": image}
     response = client.post(SERVER_URL, data=payload)
 
+    # check response
     assert response.status_code == 200
 
     # JSON format
     try:
         json_response = json.loads(response.data.decode('utf8'))
-    except json.decoder.JSONDecodeError as e:
+    except ValueError as e:
         print(e)
         assert False
 
