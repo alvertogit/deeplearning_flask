@@ -2,7 +2,7 @@
 model.py: Functions related to Deep Learning model based on Keras.
 """
 
-__author__      = "alverto"
+__author__      = "alvertogit"
 __copyright__   = "Copyright 2019"
 
 

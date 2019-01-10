@@ -2,7 +2,7 @@
 api.py: api views used by Flask server.
 """
 
-__author__      = "alverto"
+__author__      = "alvertogit"
 __copyright__   = "Copyright 2019"
 
 

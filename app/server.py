@@ -2,7 +2,7 @@
 server.py: Run Flask server with Deep Learning model.
 """
 
-__author__      = "alverto"
+__author__      = "alvertogit"
 __copyright__   = "Copyright 2019"
 
 
