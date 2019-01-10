@@ -19,7 +19,7 @@ def init_model():
         model: Loaded Deep Learning model.
     """
     
-    model = load_model(current_app.config["MODEL_NAME"])
+    model = load_model(current_app.config["MODEL_PATH"])
     model._make_predict_function()
     return model
 

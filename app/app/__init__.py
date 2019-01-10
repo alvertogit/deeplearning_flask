@@ -21,10 +21,14 @@ def create_app(config_name="default"):
         app.config["model"] = init_model()
 
     from .api import api
-    app.register_blueprint(api, url_prefix='/api')
+    app.register_blueprint(api, url_prefix="/api")
 
-    @app.route('/')
+    @app.route("/dlflask", methods=["GET"])
+    def dlflask():
+        return render_template("dlflask.html")
+
+    @app.route("/", methods=["GET"])
     def index():
-        return render_template('index.html')
+        return "Deep Learning on Flask"
 
     return app

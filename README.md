@@ -43,14 +43,6 @@ Command to configure virtual environment with [Conda]:
 (dlflask36)~/deeplearning_flask$
 ```
 
-Command to configure virtual environment with [virtualenv]:
-
-```bash
-~/deeplearning_flask$ make install
-~/deeplearning_flask$ source dlflask36/bin/activate
-(dlflask36)~/deeplearning_flask$
-```
-
 ## REPOSITORY CONTENT
 
 The repository main folder contains:
@@ -60,28 +52,30 @@ deeplearning_flask
 ├── .env.example
 ├── app
 │   ├── app
-│   │   ├── api.py
 │   │   ├── __init__.py
+│   │   ├── api.py
 │   │   ├── model.py
 │   │   ├── static
 │   │   │   └── 4.jpg
 │   │   └── templates
-│   │       └── index.html
+│   │       └── dlflask.html
 │   ├── config.py
+│   ├── Makefile
 │   ├── mnist_model.h5
-│   └── server.py
+│   ├── server.py
+│   └── tests
+│       ├── __init__.py
+│       ├── conftest.py
+│       └── test_app.py
 ├── Deep Learning MNIST prediction model with Keras.ipynb
 ├── dlflask36.yaml
 ├── docker-compose.yml
 ├── Dockerfile
-├── Makefile
 ├── nginx
 │   └── conf.d
 │       └── local.conf
 ├── README.md
-├── requirements.txt
-└── tests
-    └── test_system.py
+└── requirements.txt
 ```
 
 ## ARCHITECTURE
@@ -127,28 +121,29 @@ web_1_9b6c64fc338e | Using TensorFlow backend.
 
 ## TEST SERVER & REST API
 
-There are different ways to check that the server is running properly. One is opening a web browser such as Chrome or Mozilla and paste the following URL:
+There are different ways to check that the server is running properly. One is opening a web browser such as Chrome or Mozilla and paste the following URLs:
 
 ```bash
 http://127.0.0.1/
 ```
 
-The web browser should show the index webpage.
+The web browser should show the text "Deep Learning on Flask".
 
-[REST API] can be tested with [requests] or [curl].
+[REST API] can be tested with [pytest] or [curl].
 
-It is possible to execute a system test from outside [Docker] container using [pytest] and [requests]:
+It is possible to execute tests of [Flask] microservice created with [pytest] from inside the [Flask] [Docker] container using [Makefile]:
 
 ```bash
-~/deeplearning_flask$ make install
+~/deeplearning_flask$ docker exec -it deeplearning_flask_web_1 /bin/bash
+~/app# make test
 ...
-~/deeplearning_flask$ make test
+test_app.py ..                                                         [100%]
 ```
 
 A POST example using [curl] from outside [Docker] container is shown below:
 
 ```bash
-~/deeplearning_flask$ curl -F image=@app/app/static/4.jpg -X POST 'http://127.0.0.1/api/predictlabel'
+~/deeplearning_flask$ curl -F file=@app/app/static/4.jpg -X POST 'http://127.0.0.1/api/predictlabel'
 {
   "most_probable_label": "4",
   "predictions": [
@@ -207,7 +202,6 @@ A POST example using [curl] from outside [Docker] container is shown below:
 [REST API]: https://en.wikipedia.org/wiki/Representational_state_transfer
 [Docker-Compose]: https://github.com/docker/compose
 [Conda]: https://conda.io/docs/index.html
-[virtualenv]: https://virtualenv.pypa.io/en/stable/
 [Anaconda]: https://www.anaconda.com/
 [Jupyter Notebook]: http://jupyter.org/
 [Deep Learning]: https://en.wikipedia.org/wiki/Deep_learning
@@ -218,4 +212,4 @@ A POST example using [curl] from outside [Docker] container is shown below:
 [scikit-image]: https://scikit-image.org/
 [curl]: https://curl.haxx.se/
 [pytest]: https://docs.pytest.org/en/latest/
-[requests]: http://docs.python-requests.org/en/master/
+[Makefile]: https://en.wikipedia.org/wiki/Makefile

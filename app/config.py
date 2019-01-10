@@ -14,7 +14,7 @@ class DefaultConfig:
     else:
         raise ValueError("SECRET KEY NOT FOUND!")
 
-    MODEL_NAME = os.environ.get("MODEL_NAME") or "mnist_model.h5"
+    MODEL_PATH = os.environ.get("MODEL_PATH") or "/app/mnist_model.h5"
 
     @staticmethod
     def init_app(app):
