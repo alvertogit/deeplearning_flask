@@ -49,7 +49,7 @@ pytest==4.0.2
 python-dateutil==2.7.5
 pytz==2018.7
 PyWavelets==1.0.1
-PyYAML==3.13
+PyYAML==4.2b4
 pyzmq==17.1.2
 requests==2.21.0
 scikit-image==0.14.1

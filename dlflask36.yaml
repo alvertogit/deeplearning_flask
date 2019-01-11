@@ -77,7 +77,7 @@ dependencies:
     - pytest==4.0.2
     - pytz==2018.7
     - pywavelets==1.0.1
-    - pyyaml==3.13
+    - pyyaml==4.2b4
     - requests==2.21.0
     - scikit-image==0.14.1
     - scipy==1.2.0
