@@ -2,13 +2,13 @@
 
 This repository stores a test to demonstrate skills mainly with [Python], [Keras], [Flask], [Docker], [Jupyter Notebook], [microservices] and [REST API].
 
-* [PURPOSE](#purpose)
-* [DEPENDENCIES](#dependencies)
-  * [PYTHON VIRTUAL ENVIRONMENT](#python-virtual-environment)
-* [REPOSITORY CONTENT](#repository-content)
-* [ARCHITECTURE](#architecture)
-* [HOW TO RUN DEEP LEARNING ON FLASK WITH DOCKER COMPOSE](#how-to-run-deep-learning-on-flask-with-docker-compose)
-* [TEST SERVER & REST API](#test-server--rest-api)
+- [PURPOSE](#purpose)
+- [DEPENDENCIES](#dependencies)
+  - [PYTHON VIRTUAL ENVIRONMENT](#python-virtual-environment)
+- [REPOSITORY CONTENT](#repository-content)
+- [ARCHITECTURE](#architecture)
+- [HOW TO RUN DEEP LEARNING ON FLASK WITH DOCKER COMPOSE](#how-to-run-deep-learning-on-flask-with-docker-compose)
+- [TEST SERVER & REST API](#test-server--rest-api)
 
 ## PURPOSE
 
@@ -22,14 +22,14 @@ The code has been tested using:
 * [Flask] (1.0.2): a microframework for [Python] based on Werkzeug, Jinja 2 and good intentions.
 * [Gunicorn] (19.9.0): a [Python] [WSGI] HTTP Server for UNIX.
 * [NGINX] (1.15.8): a free, open-source, high-performance HTTP server, reverse proxy, and IMAP/POP3 proxy server.
-* [Docker] (18.09.0-ce): an open platform for developers and sysadmins to build, ship, and run distributed applications, whether on laptops, data center VMs, or the cloud.
+* [Docker] (18.09.1-ce): an open platform for developers and sysadmins to build, ship, and run distributed applications, whether on laptops, data center VMs, or the cloud.
 * [Docker-Compose] (1.23.2): a tool for defining and running multi-container [Docker] applications.
 * [Keras] (2.2.4): a high-level neural networks [API], written in [Python] and capable of running on top of [TensorFlow], CNTK, or Theano.
 * [Tensorflow] (1.12.0): an open source software [Deep Learning] library for high performance numerical computation using data flow graphs.
 * [Matplotlib] (3.0.2): a plotting library for [Python] and its numerical mathematics extension [NumPy].
-* [NumPy] (1.15.4): a library for [Python], adding support for large, multi-dimensional arrays and matrices, along with a large collection of high-level mathematical functions to operate on these arrays.
-* [scikit-image] (0.14.1): a collection of algorithms for image processing with [Python].
-* [Conda] (4.5.12): a package and virtual environment manager included in [Python] Data Science Platform [Anaconda].
+* [NumPy] (1.16.1): a library for [Python], adding support for large, multi-dimensional arrays and matrices, along with a large collection of high-level mathematical functions to operate on these arrays.
+* [scikit-image] (0.14.2): a collection of algorithms for image processing with [Python].
+* [Conda] (4.6.2): a package and virtual environment manager included in [Python] Data Science Platform [Anaconda].
 
 ### PYTHON VIRTUAL ENVIRONMENT
 
@@ -39,7 +39,7 @@ Command to configure virtual environment with [Conda]:
 
 ```bash
 ~/deeplearning_flask$ conda env create -f dlflask36.yaml
-~/deeplearning_flask$ source activate dlflask36
+~/deeplearning_flask$ conda activate dlflask36
 (dlflask36)~/deeplearning_flask$
 ```
 
@@ -99,7 +99,7 @@ Client <──>| NGINX ├<─bridge─>| Flask + Gunicorn |
 
 The steps and commands to run the [deep learning] model on the [Flask] server with [docker-compose] are described below.
 
-Then [docker-compose] can be executed to build services.
+Before executing [docker-compose] is strongly recommended to close other applications to free up resources and ports to avoid potential issues. Then [docker-compose] can be executed to build services.
 
 ```bash
 ~/deeplearning_flask$ docker-compose build
