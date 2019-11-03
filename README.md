@@ -18,29 +18,29 @@ The goal is to deploy on [Flask] a [deep learning] model as a microservice. The 
 
 The code has been tested using:
 
-* [Python] (3.6.8): an interpreted high-level programming language for general-purpose programming.
-* [Flask] (1.0.2): a microframework for [Python] based on Werkzeug, Jinja 2 and good intentions.
+* [Python] (3.7.5): an interpreted high-level programming language for general-purpose programming.
+* [Flask] (1.1.1): a microframework for [Python] based on Werkzeug, Jinja 2 and good intentions.
 * [Gunicorn] (19.9.0): a [Python] [WSGI] HTTP Server for UNIX.
-* [NGINX] (1.15.12): a free, open-source, high-performance HTTP server, reverse proxy, and IMAP/POP3 proxy server.
-* [Docker] (18.09.6-ce): an open platform for developers and sysadmins to build, ship, and run distributed applications, whether on laptops, data center VMs, or the cloud.
-* [Docker-Compose] (1.24.0): a tool for defining and running multi-container [Docker] applications.
-* [Keras] (2.2.4): a high-level neural networks [API], written in [Python] and capable of running on top of [TensorFlow], CNTK, or Theano.
-* [Tensorflow] (1.13.1): an open source software [Deep Learning] library for high performance numerical computation using data flow graphs.
-* [Matplotlib] (3.0.3): a plotting library for [Python] and its numerical mathematics extension [NumPy].
-* [NumPy] (1.16.3): a library for [Python], adding support for large, multi-dimensional arrays and matrices, along with a large collection of high-level mathematical functions to operate on these arrays.
-* [scikit-image] (0.15.0): a collection of algorithms for image processing with [Python].
-* [Conda] (4.6.14): a package and virtual environment manager included in [Python] Data Science Platform [Anaconda].
+* [NGINX] (1.17.5): a free, open-source, high-performance HTTP server, reverse proxy, and IMAP/POP3 proxy server.
+* [Docker] (19.03.4-ce): an open platform for developers and sysadmins to build, ship, and run distributed applications, whether on laptops, data center VMs, or the cloud.
+* [Docker-Compose] (1.24.1): a tool for defining and running multi-container [Docker] applications.
+* [Keras] ([TensorFlow] built-in): a high-level neural networks [API], written in [Python] and capable of running on top of [TensorFlow], CNTK, or Theano.
+* [Tensorflow] (2.0.0): an open source software [Deep Learning] library for high performance numerical computation using data flow graphs.
+* [Matplotlib] (3.1.1): a plotting library for [Python] and its numerical mathematics extension [NumPy].
+* [NumPy] (1.17.3): a library for [Python], adding support for large, multi-dimensional arrays and matrices, along with a large collection of high-level mathematical functions to operate on these arrays.
+* [scikit-image] (0.16.2): a collection of algorithms for image processing with [Python].
+* [Conda] (4.7.12): a package and virtual environment manager included in [Python] Data Science Platform [Anaconda].
 
 ### PYTHON VIRTUAL ENVIRONMENT
 
-Virtual environment (<env_name>=**dlflask36**) can be generated from **dlflask36.yaml**, **requirements.txt** files located in the repository.
+Virtual environment (<env_name>=**dlflask37**) can be generated from **dlflask37.yaml**, **requirements.txt** files located in the repository.
 
 Command to configure virtual environment with [Conda]:
 
 ```bash
-~/deeplearning_flask$ conda env create -f dlflask36.yaml
-~/deeplearning_flask$ conda activate dlflask36
-(dlflask36)~/deeplearning_flask$
+~/deeplearning_flask$ conda env create -f dlflask37.yaml
+~/deeplearning_flask$ conda activate dlflask37
+(dlflask37)~/deeplearning_flask$
 ```
 
 ## REPOSITORY CONTENT
@@ -68,7 +68,7 @@ deeplearning_flask
 │       ├── conftest.py
 │       └── test_app.py
 ├── Deep Learning MNIST prediction model with Keras.ipynb
-├── dlflask36.yaml
+├── dlflask37.yaml
 ├── docker-compose.yml
 ├── Dockerfile
 ├── nginx

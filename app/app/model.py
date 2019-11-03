@@ -6,7 +6,7 @@ __author__      = "alvertogit"
 __copyright__   = "Copyright 2019"
 
 
-from keras.models import load_model
+from tensorflow.keras.models import load_model
 from skimage import transform, util
 import numpy as np
 

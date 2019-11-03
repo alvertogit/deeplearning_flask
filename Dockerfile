@@ -1,4 +1,4 @@
-FROM python:3.6.8-slim-stretch
+FROM python:3.7.5-slim-stretch
 ENV PYTHONUNBUFFERED 1
 RUN apt-get update \
     && apt-get install -y make \
