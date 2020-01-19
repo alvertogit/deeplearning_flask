@@ -212,6 +212,8 @@ A POST example using [curl] from outside [Docker] container is shown below:
 [microservices]: https://en.wikipedia.org/wiki/Microservices
 [REST API]: https://en.wikipedia.org/wiki/Representational_state_transfer
 [Docker-Compose]: https://github.com/docker/compose
+[venv]: https://docs.python.org/3/library/venv.html
+[virtualenv]: https://virtualenv.pypa.io/en/stable/
 [Jupyter Lab]: http://jupyter.org/
 [Jupyter Notebook]: http://jupyter.org/
 [Deep Learning]: https://en.wikipedia.org/wiki/Deep_learning
