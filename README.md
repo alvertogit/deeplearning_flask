@@ -7,6 +7,7 @@ This repository stores a test to demonstrate skills mainly with [Python], [Keras
   - [PYTHON VIRTUAL ENVIRONMENT](#python-virtual-environment)
 - [REPOSITORY CONTENT](#repository-content)
 - [ARCHITECTURE](#architecture)
+- [DEEP LEARNING MODEL](#deep-learning-model)
 - [HOW TO RUN DEEP LEARNING ON FLASK WITH DOCKER COMPOSE](#how-to-run-deep-learning-on-flask-with-docker-compose)
 - [TEST SERVER & REST API](#test-server--rest-api)
 
@@ -18,29 +19,37 @@ The goal is to deploy on [Flask] a [deep learning] model as a microservice. The 
 
 The code has been tested using:
 
-* [Python] (3.7.5): an interpreted high-level programming language for general-purpose programming.
+* [Python] (3.7.6): an interpreted high-level programming language for general-purpose programming.
 * [Flask] (1.1.1): a microframework for [Python] based on Werkzeug, Jinja 2 and good intentions.
-* [Gunicorn] (19.9.0): a [Python] [WSGI] HTTP Server for UNIX.
-* [NGINX] (1.17.5): a free, open-source, high-performance HTTP server, reverse proxy, and IMAP/POP3 proxy server.
-* [Docker] (19.03.4-ce): an open platform for developers and sysadmins to build, ship, and run distributed applications, whether on laptops, data center VMs, or the cloud.
-* [Docker-Compose] (1.24.1): a tool for defining and running multi-container [Docker] applications.
-* [Keras] ([TensorFlow] built-in): a high-level neural networks [API], written in [Python] and capable of running on top of [TensorFlow], CNTK, or Theano.
-* [Tensorflow] (2.0.0): an open source software [Deep Learning] library for high performance numerical computation using data flow graphs.
-* [Matplotlib] (3.1.1): a plotting library for [Python] and its numerical mathematics extension [NumPy].
-* [NumPy] (1.17.3): a library for [Python], adding support for large, multi-dimensional arrays and matrices, along with a large collection of high-level mathematical functions to operate on these arrays.
+* [Gunicorn] (20.0.4): a [Python] [WSGI] HTTP Server for UNIX.
+* [NGINX] (1.17.7): a free, open-source, high-performance HTTP server, reverse proxy, and IMAP/POP3 proxy server.
+* [Docker] (19.03.5-ce): an open platform for developers and sysadmins to build, ship, and run distributed applications, whether on laptops, data center VMs, or the cloud.
+* [Docker-Compose] (1.25.1): a tool for defining and running multi-container [Docker] applications.
+* [Keras] ([TensorFlow] built-in): a high-level neural networks [API], written in [Python] and capable of running on top of [TensorFlow].
+* [Tensorflow] (2.1.0): an open source software [Deep Learning] library for high performance numerical computation using data flow graphs.
+* [Matplotlib] (3.1.2): a plotting library for [Python] and its numerical mathematics extension [NumPy].
+* [NumPy] (1.18.1): a library for [Python], adding support for large, multi-dimensional arrays and matrices, along with a large collection of high-level mathematical functions to operate on these arrays.
 * [scikit-image] (0.16.2): a collection of algorithms for image processing with [Python].
-* [Conda] (4.7.12): a package and virtual environment manager included in [Python] Data Science Platform [Anaconda].
 
 ### PYTHON VIRTUAL ENVIRONMENT
 
-Virtual environment (<env_name>=**dlflask37**) can be generated from **dlflask37.yaml**, **requirements.txt** files located in the repository.
+Virtual environment (<env_name>=**dlflask37**) can be generated from **requirements.txt** file located in the repository.
 
-Command to configure virtual environment with [Conda]:
+
+Command to configure virtual environment with [venv]:
 
 ```bash
-~/deeplearning_flask$ conda env create -f dlflask37.yaml
-~/deeplearning_flask$ conda activate dlflask37
-(dlflask37)~/deeplearning_flask$
+~/deeplearning_flask$ python -m venv dlflask37
+~/deeplearning_flask$ source dlflask37/bin/activate
+(dlflask37)~/deeplearning_flask$ pip install -r requirements.txt
+```
+
+Command to configure virtual environment with [virtualenv]:
+
+```bash
+~/deeplearning_flask$ virtualenv dlflask37
+~/deeplearning_flask$ source dlflask37/bin/activate
+(dlflask37)~/deeplearning_flask$ pip install -r requirements.txt
 ```
 
 ## REPOSITORY CONTENT
@@ -68,9 +77,9 @@ deeplearning_flask
 │       ├── conftest.py
 │       └── test_app.py
 ├── Deep Learning MNIST prediction model with Keras.ipynb
-├── dlflask37.yaml
 ├── docker-compose.yml
 ├── Dockerfile
+├── docs
 ├── nginx
 │   └── conf.d
 │       └── local.conf
@@ -87,12 +96,14 @@ The architecture created with [docker-compose] uses two different [Docker] conta
 
 The following diagram illustrates the architecture in blocks:
 
+![Architecture](docs/architecture.png)
+
+## DEEP LEARNING MODEL
+
+The definition and training of the [deep learning] MNIST model was done through a notebook in [Jupyter Lab]. The employed notebook is stored in the main folder, to run it use the command shown below:
+
 ```bash
-            _______            __________________
-           |       |          |                  |
-Client <──>| NGINX ├<─bridge─>| Flask + Gunicorn |
-           |       |          |                  |
-            ¯¯¯¯¯¯¯            ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+(dlflask37)~/deeplearning_flask$ jupyter lab Deep\ Learning\ MNIST\ prediction\ model\ with\ Keras.ipynb
 ```
 
 ## HOW TO RUN DEEP LEARNING ON FLASK WITH DOCKER COMPOSE
@@ -201,8 +212,7 @@ A POST example using [curl] from outside [Docker] container is shown below:
 [microservices]: https://en.wikipedia.org/wiki/Microservices
 [REST API]: https://en.wikipedia.org/wiki/Representational_state_transfer
 [Docker-Compose]: https://github.com/docker/compose
-[Conda]: https://conda.io/docs/index.html
-[Anaconda]: https://www.anaconda.com/
+[Jupyter Lab]: http://jupyter.org/
 [Jupyter Notebook]: http://jupyter.org/
 [Deep Learning]: https://en.wikipedia.org/wiki/Deep_learning
 [Keras]: https://keras.io/

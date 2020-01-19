@@ -1,0 +1,14 @@
+@startuml
+title Architecture
+
+actor Client 
+rectangle NGINX
+rectangle web {
+rectangle Flask
+rectangle Gunicorn
+}
+
+Client <-> NGINX
+NGINX <-> Gunicorn : brigde
+Gunicorn <-> Flask
+@enduml
