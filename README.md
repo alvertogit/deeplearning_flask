@@ -20,14 +20,15 @@ The goal is to deploy on [Flask] a [deep learning] model as a microservice. The 
 The code has been tested using:
 
 * [Python] (3.7.6): an interpreted high-level programming language for general-purpose programming.
+* [Jupyter Lab] (1.2.6): a web-based interactive development environment for [Jupyter Notebooks], code, and data.
 * [Flask] (1.1.1): a microframework for [Python] based on Werkzeug, Jinja 2 and good intentions.
 * [Gunicorn] (20.0.4): a [Python] [WSGI] HTTP Server for UNIX.
-* [NGINX] (1.17.7): a free, open-source, high-performance HTTP server, reverse proxy, and IMAP/POP3 proxy server.
-* [Docker] (19.03.5-ce): an open platform for developers and sysadmins to build, ship, and run distributed applications, whether on laptops, data center VMs, or the cloud.
+* [NGINX] (1.17.8): a free, open-source, high-performance HTTP server, reverse proxy, and IMAP/POP3 proxy server.
+* [Docker] (19.03.6-ce): an open platform for developers and sysadmins to build, ship, and run distributed applications, whether on laptops, data center VMs, or the cloud.
 * [Docker-Compose] (1.25.1): a tool for defining and running multi-container [Docker] applications.
 * [Keras] ([TensorFlow] built-in): a high-level neural networks [API], written in [Python] and capable of running on top of [TensorFlow].
-* [Tensorflow] (2.1.0): an open source software [Deep Learning] library for high performance numerical computation using data flow graphs.
-* [Matplotlib] (3.1.2): a plotting library for [Python] and its numerical mathematics extension [NumPy].
+* [TensorFlow] (2.1.0): an open source software [Deep Learning] library for high performance numerical computation using data flow graphs.
+* [Matplotlib] (3.1.3): a plotting library for [Python] and its numerical mathematics extension [NumPy].
 * [NumPy] (1.18.1): a library for [Python], adding support for large, multi-dimensional arrays and matrices, along with a large collection of high-level mathematical functions to operate on these arrays.
 * [scikit-image] (0.16.2): a collection of algorithms for image processing with [Python].
 
@@ -216,9 +217,10 @@ A POST example using [curl] from outside [Docker] container is shown below:
 [virtualenv]: https://virtualenv.pypa.io/en/stable/
 [Jupyter Lab]: http://jupyter.org/
 [Jupyter Notebook]: http://jupyter.org/
+[Jupyter Notebooks]: http://jupyter.org/
 [Deep Learning]: https://en.wikipedia.org/wiki/Deep_learning
 [Keras]: https://keras.io/
-[Tensorflow]: https://www.tensorflow.org/
+[TensorFlow]: https://www.tensorflow.org/
 [Matplotlib]: https://matplotlib.org/
 [NumPy]: http://www.numpy.org/
 [scikit-image]: https://scikit-image.org/
