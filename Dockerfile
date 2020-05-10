@@ -8,8 +8,8 @@ RUN mkdir -p /app
 WORKDIR /app
 COPY requirements.txt /app
 RUN python -m venv .
-RUN pip install pip==20.0.2
-RUN pip install setuptools==46.0.0
+RUN pip install pip==20.1
+RUN pip install setuptools==46.1.3
 RUN pip install --no-cache-dir -r requirements.txt
 COPY ./app /app
 EXPOSE 5000

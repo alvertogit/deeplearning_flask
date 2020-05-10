@@ -1,10 +1,10 @@
-Flask==1.1.1
+Flask==1.1.2
 gunicorn==20.0.4
-jupyterlab==2.0.1
+jupyterlab==2.1.2
 matplotlib==3.2.1
-numpy==1.18.2
-Pillow==7.0.0
-pytest==5.4.1
+numpy==1.18.4
+Pillow==7.1.2
+pytest==5.4.2
 requests==2.23.0
-scikit-image==0.16.2
-tensorflow==2.1.0
+scikit-image==0.17.1
+tensorflow==2.2.0
