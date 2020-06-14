@@ -3,7 +3,7 @@ __init__.py: Flask server with Deep Learning model.
 """
 
 __author__      = "alvertogit"
-__copyright__   = "Copyright 2019"
+__copyright__   = "Copyright 2018-2020"
 
 
 from flask import Flask, render_template
