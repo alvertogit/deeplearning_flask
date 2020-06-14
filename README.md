@@ -10,6 +10,7 @@ This repository stores a test to demonstrate skills mainly with [Python], [Keras
 - [DEEP LEARNING MODEL](#deep-learning-model)
 - [HOW TO RUN DEEP LEARNING ON FLASK WITH DOCKER COMPOSE](#how-to-run-deep-learning-on-flask-with-docker-compose)
 - [TEST SERVER & REST API](#test-server--rest-api)
+- [CREDITS](#credits)
 
 ## PURPOSE
 
@@ -207,6 +208,11 @@ A POST example using [curl] from outside [Docker] container is shown below:
   "success": true
 }
 ```
+
+## CREDITS
+
+author: alvertogit
+copyright: 2018-2020
 
 [Python]: https://www.python.org/
 [Flask]: http://flask.pocoo.org/
