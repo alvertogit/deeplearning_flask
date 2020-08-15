@@ -20,16 +20,16 @@ The goal is to deploy on [Flask] a [deep learning] model as a microservice. The 
 
 The code has been tested using:
 
-* [Python] (3.7.7): an interpreted high-level programming language for general-purpose programming.
-* [Jupyter Lab] (2.1.4): a web-based interactive development environment for [Jupyter Notebooks], code and data.
+* [Python] (3.7.8): an interpreted high-level programming language for general-purpose programming.
+* [Jupyter Lab] (2.2.4): a web-based interactive development environment for [Jupyter Notebooks], code and data.
 * [Flask] (1.1.2): a microframework for [Python] based on Werkzeug, Jinja 2 and good intentions.
 * [Gunicorn] (20.0.4): a [Python] [WSGI] HTTP Server for UNIX.
-* [NGINX] (1.19.0): a free, open-source, high-performance HTTP server, reverse proxy, and IMAP/POP3 proxy server.
-* [Docker] (19.03.11-ce): an open platform for developers and sysadmins to build, ship, and run distributed applications, whether on laptops, data center VMs, or the cloud.
+* [NGINX] (1.19.2): a free, open-source, high-performance HTTP server, reverse proxy, and IMAP/POP3 proxy server.
+* [Docker] (19.03.12-ce): an open platform for developers and sysadmins to build, ship, and run distributed applications, whether on laptops, data center VMs, or the cloud.
 * [Docker-Compose] (1.25.5): a tool for defining and running multi-container [Docker] applications.
 * [Keras] ([TensorFlow] built-in): a high-level neural networks [API], written in [Python] and capable of running on top of [TensorFlow].
-* [TensorFlow] (2.2.0): an open source software [Deep Learning] library for high performance numerical computation using data flow graphs.
-* [Matplotlib] (3.2.1): a plotting library for [Python] and its numerical mathematics extension [NumPy].
+* [TensorFlow] (2.3.0): an open source software [Deep Learning] library for high performance numerical computation using data flow graphs.
+* [Matplotlib] (3.3.0): a plotting library for [Python] and its numerical mathematics extension [NumPy].
 * [NumPy] (1.18.5): a library for [Python], adding support for large, multi-dimensional arrays and matrices, along with a large collection of high-level mathematical functions to operate on these arrays.
 * [scikit-image] (0.17.2): a collection of algorithms for image processing with [Python].
 
@@ -43,8 +43,8 @@ Command to configure virtual environment with [venv]:
 ```bash
 ~/deeplearning_flask$ python -m venv dlflask37
 ~/deeplearning_flask$ source dlflask37/bin/activate
-(dlflask37)~/deeplearning_flask$ pip install pip==20.1.1
-(dlflask37)~/deeplearning_flask$ pip install setuptools==47.1.1
+(dlflask37)~/deeplearning_flask$ pip install pip==20.2.2
+(dlflask37)~/deeplearning_flask$ pip install setuptools==49.6.0
 (dlflask37)~/deeplearning_flask$ pip install -r requirements.txt
 ```
 
@@ -53,8 +53,8 @@ Command to configure virtual environment with [virtualenv]:
 ```bash
 ~/deeplearning_flask$ virtualenv dlflask37
 ~/deeplearning_flask$ source dlflask37/bin/activate
-(dlflask37)~/deeplearning_flask$ pip install pip==20.1.1
-(dlflask37)~/deeplearning_flask$ pip install setuptools==47.1.1
+(dlflask37)~/deeplearning_flask$ pip install pip==20.2.2
+(dlflask37)~/deeplearning_flask$ pip install setuptools==49.6.0
 (dlflask37)~/deeplearning_flask$ pip install -r requirements.txt
 ```
 
