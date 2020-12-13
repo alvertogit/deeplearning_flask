@@ -20,42 +20,42 @@ The goal is to deploy on [Flask] a [deep learning] model as a microservice. The 
 
 The code has been tested using:
 
-* [Python] (3.7.9): an interpreted high-level programming language for general-purpose programming.
-* [Jupyter Lab] (2.2.8): a web-based interactive development environment for [Jupyter Notebooks], code and data.
+* [Python] (3.8.6): an interpreted high-level programming language for general-purpose programming.
+* [Jupyter Lab] (2.2.9): a web-based interactive development environment for [Jupyter Notebooks], code and data.
 * [Flask] (1.1.2): a microframework for [Python] based on Werkzeug, Jinja 2 and good intentions.
 * [Gunicorn] (20.0.4): a [Python] [WSGI] HTTP Server for UNIX.
-* [NGINX] (1.19.2): a free, open-source, high-performance HTTP server, reverse proxy, and IMAP/POP3 proxy server.
+* [NGINX] (1.19.5): a free, open-source, high-performance HTTP server, reverse proxy, and IMAP/POP3 proxy server.
 * [Docker] (19.03.13-ce): an open platform for developers and sysadmins to build, ship, and run distributed applications, whether on laptops, data center VMs, or the cloud.
-* [Docker-Compose] (1.27.2): a tool for defining and running multi-container [Docker] applications.
+* [Docker-Compose] (1.27.4): a tool for defining and running multi-container [Docker] applications.
 * [Keras] ([TensorFlow] built-in): a high-level neural networks [API], written in [Python] and capable of running on top of [TensorFlow].
 * [TensorFlow] (2.3.1): an open source software [Deep Learning] library for high performance numerical computation using data flow graphs.
-* [Matplotlib] (3.3.2): a plotting library for [Python] and its numerical mathematics extension [NumPy].
-* [NumPy] (1.19.2): a library for [Python], adding support for large, multi-dimensional arrays and matrices, along with a large collection of high-level mathematical functions to operate on these arrays.
+* [Matplotlib] (3.3.3): a plotting library for [Python] and its numerical mathematics extension [NumPy].
+* [NumPy] (1.19.4): a library for [Python], adding support for large, multi-dimensional arrays and matrices, along with a large collection of high-level mathematical functions to operate on these arrays.
 * [scikit-image] (0.17.2): a collection of algorithms for image processing with [Python].
 
 ### PYTHON VIRTUAL ENVIRONMENT
 
-Virtual environment (<env_name>=**dlflask37**) can be generated from **requirements.txt** file located in the repository.
+Virtual environment (<env_name>=**dlflask38**) can be generated from **requirements.txt** file located in the repository.
 
 
 Command to configure virtual environment with [venv]:
 
 ```bash
-~/deeplearning_flask$ python -m venv dlflask37
-~/deeplearning_flask$ source dlflask37/bin/activate
-(dlflask37)~/deeplearning_flask$ pip install pip==20.2.3
-(dlflask37)~/deeplearning_flask$ pip install setuptools==50.3.0
-(dlflask37)~/deeplearning_flask$ pip install -r requirements.txt
+~/deeplearning_flask$ python -m venv dlflask38
+~/deeplearning_flask$ source dlflask38/bin/activate
+(dlflask38)~/deeplearning_flask$ pip install pip==20.2.4
+(dlflask38)~/deeplearning_flask$ pip install setuptools==51.0.0
+(dlflask38)~/deeplearning_flask$ pip install -r requirements.txt
 ```
 
 Command to configure virtual environment with [virtualenv]:
 
 ```bash
-~/deeplearning_flask$ virtualenv dlflask37
-~/deeplearning_flask$ source dlflask37/bin/activate
-(dlflask37)~/deeplearning_flask$ pip install pip==20.2.3
-(dlflask37)~/deeplearning_flask$ pip install setuptools==50.3.0
-(dlflask37)~/deeplearning_flask$ pip install -r requirements.txt
+~/deeplearning_flask$ virtualenv dlflask38
+~/deeplearning_flask$ source dlflask38/bin/activate
+(dlflask38)~/deeplearning_flask$ pip install pip==20.2.4
+(dlflask38)~/deeplearning_flask$ pip install setuptools==51.0.0
+(dlflask38)~/deeplearning_flask$ pip install -r requirements.txt
 ```
 
 ## REPOSITORY CONTENT
@@ -109,7 +109,7 @@ The following diagram illustrates the architecture in blocks:
 The definition and training of the [deep learning] MNIST model was done through a notebook in [Jupyter Lab]. The employed notebook is stored in the main folder, to run it use the command shown below:
 
 ```bash
-(dlflask37)~/deeplearning_flask$ jupyter lab Deep\ Learning\ MNIST\ prediction\ model\ with\ Keras.ipynb
+(dlflask38)~/deeplearning_flask$ jupyter lab Deep\ Learning\ MNIST\ prediction\ model\ with\ Keras.ipynb
 ```
 
 ## HOW TO RUN DEEP LEARNING ON FLASK WITH DOCKER COMPOSE
@@ -215,7 +215,7 @@ author: alvertogit
 copyright: 2018-2020
 
 [Python]: https://www.python.org/
-[Flask]: http://flask.pocoo.org/
+[Flask]: https://flask.palletsprojects.com/en/1.1.x/
 [Gunicorn]: https://gunicorn.org/
 [WSGI]: https://en.wikipedia.org/wiki/Web_Server_Gateway_Interface
 [NGINX]: https://www.nginx.com/
@@ -225,14 +225,14 @@ copyright: 2018-2020
 [Docker-Compose]: https://github.com/docker/compose
 [venv]: https://docs.python.org/3/library/venv.html
 [virtualenv]: https://virtualenv.pypa.io/en/stable/
-[Jupyter Lab]: http://jupyter.org/
-[Jupyter Notebook]: http://jupyter.org/
-[Jupyter Notebooks]: http://jupyter.org/
+[Jupyter Lab]: https://jupyter.org/
+[Jupyter Notebook]: https://jupyter.org/
+[Jupyter Notebooks]: https://jupyter.org/
 [Deep Learning]: https://en.wikipedia.org/wiki/Deep_learning
 [Keras]: https://keras.io/
 [TensorFlow]: https://www.tensorflow.org/
 [Matplotlib]: https://matplotlib.org/
-[NumPy]: http://www.numpy.org/
+[NumPy]: https://numpy.org/
 [scikit-image]: https://scikit-image.org/
 [curl]: https://curl.haxx.se/
 [pytest]: https://docs.pytest.org/en/latest/
