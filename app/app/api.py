@@ -3,7 +3,7 @@ api.py: api views used by Flask server.
 """
 
 __author__      = "alvertogit"
-__copyright__   = "Copyright 2018-2020"
+__copyright__   = "Copyright 2018-2021"
 
 
 from flask import Blueprint, jsonify, request

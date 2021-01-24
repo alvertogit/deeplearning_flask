@@ -11,7 +11,7 @@ services:
       - nginx_network
 
   nginx:
-    image: nginx:1.19.5-alpine
+    image: nginx:1.19.6-alpine
     ports:
       - 80:80
     volumes:

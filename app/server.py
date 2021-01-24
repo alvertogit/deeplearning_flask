@@ -3,7 +3,7 @@ server.py: Run Flask server with Deep Learning model.
 """
 
 __author__      = "alvertogit"
-__copyright__   = "Copyright 2018-2020"
+__copyright__   = "Copyright 2018-2021"
 
 
 import os
