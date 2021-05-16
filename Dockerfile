@@ -1,4 +1,4 @@
-FROM python:3.8.8-slim-buster
+FROM python:3.8.10-slim-buster
 ENV PYTHONUNBUFFERED 1
 RUN apt-get update \
     && apt-get install -y make \
@@ -7,10 +7,10 @@ RUN apt-get update \
 RUN mkdir -p /app
 WORKDIR /app
 COPY requirements.txt /app
-RUN python -m venv .
-RUN pip install pip==21.0.1
-RUN pip install setuptools==54.1.2
-RUN pip install --no-cache-dir -r requirements.txt
+RUN python3 -m venv .
+RUN python3 -m pip install pip==21.1.1
+RUN python3 -m pip install setuptools==56.2.0
+RUN python3 -m pip install --no-cache-dir -r requirements.txt
 COPY ./app /app
 EXPOSE 5000
 CMD ["gunicorn", "--bind", ":5000", "server:app"]

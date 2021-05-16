@@ -21,15 +21,15 @@ The goal is to deploy on [Flask] a [deep learning] model as a microservice. The 
 The code has been tested using:
 
 * [Python] (3.8): an interpreted high-level programming language for general-purpose programming.
-* [Jupyter Lab] (3.0.12): a web-based interactive development environment for [Jupyter Notebooks], code and data.
-* [Flask] (1.1.2): a microframework for [Python] based on Werkzeug, Jinja 2 and good intentions.
-* [Gunicorn] (20.0.4): a [Python] [WSGI] HTTP Server for UNIX.
-* [NGINX] (1.19.8): a free, open-source, high-performance HTTP server, reverse proxy, and IMAP/POP3 proxy server.
+* [Jupyter Lab] (3.0.15): a web-based interactive development environment for [Jupyter Notebooks], code and data.
+* [Flask] (2.0.0): a microframework for [Python] based on Werkzeug, Jinja 2 and good intentions.
+* [Gunicorn] (20.1.0): a [Python] [WSGI] HTTP Server for UNIX.
+* [NGINX] (1.20.0): a free, open-source, high-performance HTTP server, reverse proxy, and IMAP/POP3 proxy server.
 * [Docker] (19.03.13-ce): an open platform for developers and sysadmins to build, ship, and run distributed applications, whether on laptops, data center VMs, or the cloud.
-* [Docker-Compose] (1.28.5): a tool for defining and running multi-container [Docker] applications.
+* [Docker-Compose] (1.29.2): a tool for defining and running multi-container [Docker] applications.
 * [Keras] ([TensorFlow] built-in): a high-level neural networks [API], written in [Python] and capable of running on top of [TensorFlow].
-* [TensorFlow] (2.4.1): an open source software [Deep Learning] library for high performance numerical computation using data flow graphs.
-* [Matplotlib] (3.3.4): a plotting library for [Python] and its numerical mathematics extension [NumPy].
+* [TensorFlow] (2.5.0): an open source software [Deep Learning] library for high performance numerical computation using data flow graphs.
+* [Matplotlib] (3.4.2): a plotting library for [Python] and its numerical mathematics extension [NumPy].
 * [NumPy] (1.19.5): a library for [Python], adding support for large, multi-dimensional arrays and matrices, along with a large collection of high-level mathematical functions to operate on these arrays.
 * [scikit-image] (0.18.1): a collection of algorithms for image processing with [Python].
 
@@ -41,11 +41,11 @@ Virtual environment (<env_name>=**dlflask38**) can be generated from **requireme
 Command to configure virtual environment with [venv]:
 
 ```bash
-~/deeplearning_flask$ python -m venv dlflask38
+~/deeplearning_flask$ python3 -m venv dlflask38
 ~/deeplearning_flask$ source dlflask38/bin/activate
-(dlflask38)~/deeplearning_flask$ pip install pip==21.0.1
-(dlflask38)~/deeplearning_flask$ pip install setuptools==54.1.2
-(dlflask38)~/deeplearning_flask$ pip install -r requirements.txt
+(dlflask38)~/deeplearning_flask$ python3 -m pip install pip==21.1.1
+(dlflask38)~/deeplearning_flask$ python3 -m pip install setuptools==56.2.0
+(dlflask38)~/deeplearning_flask$ python3 -m pip install -r requirements.txt
 ```
 
 ## REPOSITORY CONTENT
@@ -150,49 +150,49 @@ test_app.py ..                                                         [100%]
 A POST example using [curl] from outside [Docker] container is shown below:
 
 ```bash
-~/deeplearning_flask$ curl -F file=@app/app/static/4.jpg -X POST 'http://127.0.0.1/api/predictlabel'
+~/deeplearning_flask$ curl -F file=@app/app/static/4.jpg -X POST 'http://127.0.0.1/api/predictlabel' | json_pp
 {
   "most_probable_label": "4",
   "predictions": [
     {
       "label": "0",
-      "probability": "5.870073e-09"
+      "probability": "8.025511e-09"
     },
     {
       "label": "1",
-      "probability": "1.0881397e-06"
+      "probability": "1.9455256e-05"
     },
     {
       "label": "2",
-      "probability": "9.185746e-06"
+      "probability": "1.4459256e-05"
     },
     {
       "label": "3",
-      "probability": "2.4672235e-07"
+      "probability": "9.0475e-06"
     },
     {
       "label": "4",
-      "probability": "0.9999093"
+      "probability": "0.9971827"
     },
     {
       "label": "5",
-      "probability": "2.981036e-07"
+      "probability": "7.5980934e-06"
     },
     {
       "label": "6",
-      "probability": "8.1526576e-07"
+      "probability": "1.1683321e-06"
     },
     {
       "label": "7",
-      "probability": "2.3985052e-05"
+      "probability": "0.0018591178"
     },
     {
       "label": "8",
-      "probability": "3.9896346e-05"
+      "probability": "0.0005154088"
     },
     {
       "label": "9",
-      "probability": "1.5145803e-05"
+      "probability": "0.00039107347"
     }
   ],
   "success": true
