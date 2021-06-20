@@ -21,10 +21,10 @@ The goal is to deploy on [Flask] a [deep learning] model as a microservice. The 
 The code has been tested using:
 
 * [Python] (3.8): an interpreted high-level programming language for general-purpose programming.
-* [Jupyter Lab] (3.0.15): a web-based interactive development environment for [Jupyter Notebooks], code and data.
-* [Flask] (2.0.0): a microframework for [Python] based on Werkzeug, Jinja 2 and good intentions.
+* [Jupyter Lab] (3.0.16): a web-based interactive development environment for [Jupyter Notebooks], code and data.
+* [Flask] (2.0.1): a microframework for [Python] based on Werkzeug, Jinja 2 and good intentions.
 * [Gunicorn] (20.1.0): a [Python] [WSGI] HTTP Server for UNIX.
-* [NGINX] (1.20.0): a free, open-source, high-performance HTTP server, reverse proxy, and IMAP/POP3 proxy server.
+* [NGINX] (1.21.0): a free, open-source, high-performance HTTP server, reverse proxy, and IMAP/POP3 proxy server.
 * [Docker] (19.03.13-ce): an open platform for developers and sysadmins to build, ship, and run distributed applications, whether on laptops, data center VMs, or the cloud.
 * [Docker-Compose] (1.29.2): a tool for defining and running multi-container [Docker] applications.
 * [Keras] ([TensorFlow] built-in): a high-level neural networks [API], written in [Python] and capable of running on top of [TensorFlow].
@@ -43,8 +43,8 @@ Command to configure virtual environment with [venv]:
 ```bash
 ~/deeplearning_flask$ python3 -m venv dlflask38
 ~/deeplearning_flask$ source dlflask38/bin/activate
-(dlflask38)~/deeplearning_flask$ python3 -m pip install pip==21.1.1
-(dlflask38)~/deeplearning_flask$ python3 -m pip install setuptools==56.2.0
+(dlflask38)~/deeplearning_flask$ python3 -m pip install pip==21.1.2
+(dlflask38)~/deeplearning_flask$ python3 -m pip install setuptools==57.0.0
 (dlflask38)~/deeplearning_flask$ python3 -m pip install -r requirements.txt
 ```
 
