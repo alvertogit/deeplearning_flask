@@ -1,4 +1,4 @@
-FROM python:3.8.10-slim-buster
+FROM python:3.8.11-slim-buster
 ENV PYTHONUNBUFFERED 1
 RUN apt-get update \
     && apt-get install -y make \
@@ -8,8 +8,8 @@ RUN mkdir -p /app
 WORKDIR /app
 COPY requirements.txt /app
 RUN python3 -m venv .
-RUN python3 -m pip install pip==21.1.2
-RUN python3 -m pip install setuptools==57.0.0
+RUN python3 -m pip install pip==21.2.4
+RUN python3 -m pip install setuptools==57.4.0
 RUN python3 -m pip install --no-cache-dir -r requirements.txt
 COPY ./app /app
 EXPOSE 5000
