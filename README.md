@@ -20,32 +20,32 @@ The goal is to deploy on [Flask] a [deep learning] model as a microservice. The 
 
 The code has been tested using:
 
-* [Python] (3.8): an interpreted high-level programming language for general-purpose programming.
-* [Jupyter Lab] (3.1.6): a web-based interactive development environment for [Jupyter Notebooks], code and data.
-* [Flask] (2.0.1): a microframework for [Python] based on Werkzeug, Jinja 2 and good intentions.
+* [Python] (3.9): an interpreted high-level programming language for general-purpose programming.
+* [Jupyter Lab] (3.2.1): a web-based interactive development environment for [Jupyter Notebooks], code and data.
+* [Flask] (2.0.2): a microframework for [Python] based on Werkzeug, Jinja 2 and good intentions.
 * [Gunicorn] (20.1.0): a [Python] [WSGI] HTTP Server for UNIX.
-* [NGINX] (1.21.1): a free, open-source, high-performance HTTP server, reverse proxy, and IMAP/POP3 proxy server.
+* [NGINX] (1.21.3): a free, open-source, high-performance HTTP server, reverse proxy, and IMAP/POP3 proxy server.
 * [Docker] (19.03.13-ce): an open platform for developers and sysadmins to build, ship, and run distributed applications, whether on laptops, data center VMs, or the cloud.
 * [Docker-Compose] (1.29.2): a tool for defining and running multi-container [Docker] applications.
 * [Keras] ([TensorFlow] built-in): a high-level neural networks [API], written in [Python] and capable of running on top of [TensorFlow].
 * [TensorFlow] (2.6.0): an open source software [Deep Learning] library for high performance numerical computation using data flow graphs.
 * [Matplotlib] (3.4.3): a plotting library for [Python] and its numerical mathematics extension [NumPy].
 * [NumPy] (1.19.5): a library for [Python], adding support for large, multi-dimensional arrays and matrices, along with a large collection of high-level mathematical functions to operate on these arrays.
-* [scikit-image] (0.18.2): a collection of algorithms for image processing with [Python].
+* [scikit-image] (0.18.3): a collection of algorithms for image processing with [Python].
 
 ### PYTHON VIRTUAL ENVIRONMENT
 
-Virtual environment (<env_name>=**dlflask38**) can be generated from **requirements.txt** file located in the repository.
+Virtual environment (<env_name>=**dlflask39**) can be generated from **requirements.txt** file located in the repository.
 
 
 Command to configure virtual environment with [venv]:
 
 ```bash
-~/deeplearning_flask$ python3 -m venv dlflask38
-~/deeplearning_flask$ source dlflask38/bin/activate
-(dlflask38)~/deeplearning_flask$ python3 -m pip install pip==21.2.4
-(dlflask38)~/deeplearning_flask$ python3 -m pip install setuptools==57.4.0
-(dlflask38)~/deeplearning_flask$ python3 -m pip install -r requirements.txt
+~/deeplearning_flask$ python3 -m venv dlflask39
+~/deeplearning_flask$ source dlflask39/bin/activate
+(dlflask39)~/deeplearning_flask$ python3 -m pip install pip==21.3.1
+(dlflask39)~/deeplearning_flask$ python3 -m pip install setuptools==58.3.0
+(dlflask39)~/deeplearning_flask$ python3 -m pip install -r requirements.txt
 ```
 
 ## REPOSITORY CONTENT
@@ -99,7 +99,7 @@ The following diagram illustrates the architecture in blocks:
 The definition and training of the [deep learning] MNIST model was done through a notebook in [Jupyter Lab]. The employed notebook is stored in the main folder, to run it use the command shown below:
 
 ```bash
-(dlflask38)~/deeplearning_flask$ jupyter lab Deep\ Learning\ MNIST\ prediction\ model\ with\ Keras.ipynb
+(dlflask39)~/deeplearning_flask$ jupyter lab Deep\ Learning\ MNIST\ prediction\ model\ with\ Keras.ipynb
 ```
 
 ## HOW TO RUN DEEP LEARNING ON FLASK WITH DOCKER COMPOSE
@@ -151,6 +151,9 @@ A POST example using [curl] from outside [Docker] container is shown below:
 
 ```bash
 ~/deeplearning_flask$ curl -F file=@app/app/static/4.jpg -X POST 'http://127.0.0.1/api/predictlabel' | json_pp
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+100 11650  100   489  100 11161    321   7347  0:00:01  0:00:01 --:--:--  7664
 {
   "most_probable_label": "4",
   "predictions": [
