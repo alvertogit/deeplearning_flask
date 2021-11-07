@@ -21,16 +21,16 @@ The goal is to deploy on [Flask] a [deep learning] model as a microservice. The 
 The code has been tested using:
 
 * [Python] (3.9): an interpreted high-level programming language for general-purpose programming.
-* [Jupyter Lab] (3.2.1): a web-based interactive development environment for [Jupyter Notebooks], code and data.
+* [Jupyter Lab] (3.2.2): a web-based interactive development environment for [Jupyter Notebooks], code and data.
 * [Flask] (2.0.2): a microframework for [Python] based on Werkzeug, Jinja 2 and good intentions.
 * [Gunicorn] (20.1.0): a [Python] [WSGI] HTTP Server for UNIX.
 * [NGINX] (1.21.3): a free, open-source, high-performance HTTP server, reverse proxy, and IMAP/POP3 proxy server.
 * [Docker] (19.03.13-ce): an open platform for developers and sysadmins to build, ship, and run distributed applications, whether on laptops, data center VMs, or the cloud.
 * [Docker-Compose] (1.29.2): a tool for defining and running multi-container [Docker] applications.
 * [Keras] ([TensorFlow] built-in): a high-level neural networks [API], written in [Python] and capable of running on top of [TensorFlow].
-* [TensorFlow] (2.6.0): an open source software [Deep Learning] library for high performance numerical computation using data flow graphs.
+* [TensorFlow] (2.7.0): an open source software [Deep Learning] library for high performance numerical computation using data flow graphs.
 * [Matplotlib] (3.4.3): a plotting library for [Python] and its numerical mathematics extension [NumPy].
-* [NumPy] (1.19.5): a library for [Python], adding support for large, multi-dimensional arrays and matrices, along with a large collection of high-level mathematical functions to operate on these arrays.
+* [NumPy] (1.21.4): a library for [Python], adding support for large, multi-dimensional arrays and matrices, along with a large collection of high-level mathematical functions to operate on these arrays.
 * [scikit-image] (0.18.3): a collection of algorithms for image processing with [Python].
 
 ### PYTHON VIRTUAL ENVIRONMENT
@@ -44,7 +44,7 @@ Command to configure virtual environment with [venv]:
 ~/deeplearning_flask$ python3 -m venv dlflask39
 ~/deeplearning_flask$ source dlflask39/bin/activate
 (dlflask39)~/deeplearning_flask$ python3 -m pip install pip==21.3.1
-(dlflask39)~/deeplearning_flask$ python3 -m pip install setuptools==58.3.0
+(dlflask39)~/deeplearning_flask$ python3 -m pip install setuptools==58.5.3
 (dlflask39)~/deeplearning_flask$ python3 -m pip install -r requirements.txt
 ```
 
