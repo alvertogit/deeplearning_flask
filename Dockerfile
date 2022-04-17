@@ -1,4 +1,4 @@
-FROM python:3.10.2-slim-bullseye
+FROM python:3.10.4-slim-bullseye
 ENV PYTHONUNBUFFERED 1
 RUN apt-get update \
     && apt-get install -y make \
@@ -8,8 +8,8 @@ RUN mkdir -p /app
 WORKDIR /app
 COPY requirements.txt /app
 RUN python3 -m venv .
-RUN python3 -m pip install pip==22.0.3
-RUN python3 -m pip install setuptools==60.8.0
+RUN python3 -m pip install pip==22.0.4
+RUN python3 -m pip install setuptools==62.1.0
 RUN python3 -m pip install --no-cache-dir -r requirements.txt
 COPY ./app /app
 EXPOSE 5000
