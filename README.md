@@ -9,7 +9,7 @@ This repository stores a test to demonstrate skills mainly with [Python], [Keras
 - [ARCHITECTURE](#architecture)
 - [DEEP LEARNING MODEL](#deep-learning-model)
 - [HOW TO RUN DEEP LEARNING ON FLASK WITH DOCKER COMPOSE](#how-to-run-deep-learning-on-flask-with-docker-compose)
-- [TEST SERVER & REST API](#test-server--rest-api)
+- [TEST SERVER \& REST API](#test-server--rest-api)
 - [CREDITS](#credits)
 
 ## PURPOSE
@@ -21,14 +21,14 @@ The goal is to deploy on [Flask] a [deep learning] model as a microservice. The 
 The code has been tested using:
 
 * [Python] (3.10): an interpreted high-level programming language for general-purpose programming.
-* [Jupyter Lab] (3.4): a web-based interactive development environment for [Jupyter Notebooks], code and data.
+* [Jupyter Lab] (3.5): a web-based interactive development environment for [Jupyter Notebooks], code and data.
 * [Flask] (2.2): a microframework for [Python] based on Werkzeug, Jinja 2 and good intentions.
 * [Gunicorn] (20.1.0): a [Python] [WSGI] HTTP Server for UNIX.
 * [NGINX] (1.23): a free, open-source, high-performance HTTP server, reverse proxy, and IMAP/POP3 proxy server.
-* [Docker] (19.03.13-ce): an open platform for developers and sysadmins to build, ship, and run distributed applications, whether on laptops, data center VMs, or the cloud.
+* [Docker] (20.10): an open platform for developers and sysadmins to build, ship, and run distributed applications, whether on laptops, data center VMs, or the cloud.
 * [Docker-Compose] (1.29.2): a tool for defining and running multi-container [Docker] applications.
 * [Keras] ([TensorFlow] built-in): a high-level neural networks [API], written in [Python] and capable of running on top of [TensorFlow].
-* [TensorFlow] (2.10): an open source software [Deep Learning] library for high performance numerical computation using data flow graphs.
+* [TensorFlow] (2.11): an open source software [Deep Learning] library for high performance numerical computation using data flow graphs.
 * [Matplotlib] (3.6): a plotting library for [Python] and its numerical mathematics extension [NumPy].
 * [NumPy] (1.23): a library for [Python], adding support for large, multi-dimensional arrays and matrices, along with a large collection of high-level mathematical functions to operate on these arrays.
 * [scikit-image] (0.19): a collection of algorithms for image processing with [Python].
@@ -43,8 +43,8 @@ Command to configure virtual environment with [venv]:
 ```bash
 ~/deeplearning_flask$ python3 -m venv dlflask3
 ~/deeplearning_flask$ source dlflask3/bin/activate
-(dlflask3)~/deeplearning_flask$ python3 -m pip install pip==22.2.2
-(dlflask3)~/deeplearning_flask$ python3 -m pip install setuptools==65.4.0
+(dlflask3)~/deeplearning_flask$ python3 -m pip install pip==22.3.1
+(dlflask3)~/deeplearning_flask$ python3 -m pip install setuptools==65.6.3
 (dlflask3)~/deeplearning_flask$ python3 -m pip install -r requirements.txt
 ```
 
