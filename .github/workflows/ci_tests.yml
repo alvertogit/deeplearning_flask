@@ -1,0 +1,31 @@
+name: CI tests
+
+on: [push, pull_request]
+
+jobs:
+  tests:
+    runs-on: ubuntu-22.04
+    strategy:
+      matrix:
+        python: [ "3.10" ]
+
+    steps:
+      - uses: actions/checkout@v3
+      - name: Load .env file
+        uses: xom9ikk/dotenv@v2
+        with:
+          path: .
+          mode: test
+      - name: Setup python ${{ matrix.python }}
+        uses: actions/setup-python@v4
+        with:
+          python-version: ${{ matrix.python }}
+      - name: Install dependencies
+        run: |
+          python3 -m pip install --upgrade pip
+          python3 -m pip install --upgrade setuptools
+          python3 -m pip install -r requirements.txt
+      - name: Run tests
+        run: |
+          cd app
+          make test

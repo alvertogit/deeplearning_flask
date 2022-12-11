@@ -1,6 +1,6 @@
 # DEEP LEARNING ON FLASK <!-- omit in toc -->
 
-This repository stores a test to demonstrate skills mainly with [Python], [Keras], [Flask], [Docker], [Jupyter Notebook], [microservices] and [REST API].
+This repository stores a test to demonstrate skills mainly with [Python], [Keras], [Flask], [Docker], [Jupyter Notebook], [microservices], [REST API] and [GitHub Actions].
 
 - [PURPOSE](#purpose)
 - [DEPENDENCIES](#dependencies)
@@ -14,7 +14,7 @@ This repository stores a test to demonstrate skills mainly with [Python], [Keras
 
 ## PURPOSE
 
-The goal is to deploy on [Flask] a [deep learning] model as a microservice. The model is used to predict handwritten digits and it has been previously trained on a [Jupyter Notebook]. [REST API] are utilized to communicate with the deployed model. e.g. send image to be analized and return the generated predictions to the client.
+The goal is to deploy on [Flask] a [deep learning] model as a microservice. The model is used to predict handwritten digits and it has been previously trained on a [Jupyter Notebook]. [REST API] are utilized to communicate with the deployed model. e.g. send image to be analized and return the generated predictions to the client. [GitHub Actions] are employed to implement CI/CD workflows in the project.
 
 ## DEPENDENCIES
 
@@ -35,7 +35,7 @@ The code has been tested using:
 
 ### PYTHON VIRTUAL ENVIRONMENT
 
-Virtual environment (<env_name>=**dlflask3**) can be generated from **requirements.txt** file located in the repository.
+Virtual environment (<env_name>=**dlflask3**) can be generated from **requirements_dev.txt** file located in the repository.
 
 
 Command to configure virtual environment with [venv]:
@@ -45,7 +45,7 @@ Command to configure virtual environment with [venv]:
 ~/deeplearning_flask$ source dlflask3/bin/activate
 (dlflask3)~/deeplearning_flask$ python3 -m pip install pip==22.3.1
 (dlflask3)~/deeplearning_flask$ python3 -m pip install setuptools==65.6.3
-(dlflask3)~/deeplearning_flask$ python3 -m pip install -r requirements.txt
+(dlflask3)~/deeplearning_flask$ python3 -m pip install -r requirements_dev.txt
 ```
 
 ## REPOSITORY CONTENT
@@ -55,6 +55,10 @@ The repository main folder contains:
 ```bash
 deeplearning_flask
 ├── .env.example
+├── .env.test
+├── .github
+│   └── workflows
+│       └── ci_tests.yml
 ├── app
 │   ├── app
 │   │   ├── __init__.py
@@ -79,7 +83,8 @@ deeplearning_flask
 │   └── conf.d
 │       └── local.conf
 ├── README.md
-└── requirements.txt
+├── requirements.txt
+└── requirements_dev.txt
 ```
 
 ## ARCHITECTURE
@@ -153,6 +158,8 @@ It is possible to execute tests of [Flask] microservice created with [pytest] fr
 test_app.py ..                                                         [100%]
 ```
 
+Those tests are also automatically executed with CI/CD workflows implemented with [GitHub Actions] for every push and pull request in the project repository.
+
 A POST example using [curl] from outside [Docker] container is shown below:
 
 ```bash
@@ -221,6 +228,7 @@ copyright: 2018-2022
 [Docker]: https://www.docker.com/
 [microservices]: https://en.wikipedia.org/wiki/Microservices
 [REST API]: https://en.wikipedia.org/wiki/Representational_state_transfer
+[GitHub Actions]: https://github.com/features/actions
 [Docker-Compose]: https://github.com/docker/compose
 [venv]: https://docs.python.org/3/library/venv.html
 [Jupyter Lab]: https://jupyter.org/
