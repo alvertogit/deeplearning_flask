@@ -21,16 +21,16 @@ The goal is to deploy on [Flask] a [deep learning] model as a microservice. The 
 The code has been tested using:
 
 * [Python] (3.10): an interpreted high-level programming language for general-purpose programming.
-* [Jupyter Lab] (3.5): a web-based interactive development environment for [Jupyter Notebooks], code and data.
+* [Jupyter Lab] (3.6): a web-based interactive development environment for [Jupyter Notebooks], code and data.
 * [Flask] (2.2): a microframework for [Python] based on Werkzeug, Jinja 2 and good intentions.
 * [Gunicorn] (20.1.0): a [Python] [WSGI] HTTP Server for UNIX.
 * [NGINX] (1.23): a free, open-source, high-performance HTTP server, reverse proxy, and IMAP/POP3 proxy server.
 * [Docker] (20.10): an open platform for developers and sysadmins to build, ship, and run distributed applications, whether on laptops, data center VMs, or the cloud.
-* [Docker-Compose] (1.29.2): a tool for defining and running multi-container [Docker] applications.
+* [Docker-Compose] (1.29): a tool for defining and running multi-container [Docker] applications.
 * [Keras] ([TensorFlow] built-in): a high-level neural networks [API], written in [Python] and capable of running on top of [TensorFlow].
 * [TensorFlow] (2.11): an open source software [Deep Learning] library for high performance numerical computation using data flow graphs.
 * [Matplotlib] (3.6): a plotting library for [Python] and its numerical mathematics extension [NumPy].
-* [NumPy] (1.23): a library for [Python], adding support for large, multi-dimensional arrays and matrices, along with a large collection of high-level mathematical functions to operate on these arrays.
+* [NumPy] (1.24): a library for [Python], adding support for large, multi-dimensional arrays and matrices, along with a large collection of high-level mathematical functions to operate on these arrays.
 * [scikit-image] (0.19): a collection of algorithms for image processing with [Python].
 
 ### PYTHON VIRTUAL ENVIRONMENT
@@ -43,8 +43,8 @@ Command to configure virtual environment with [venv]:
 ```bash
 ~/deeplearning_flask$ python3 -m venv dlflask3
 ~/deeplearning_flask$ source dlflask3/bin/activate
-(dlflask3)~/deeplearning_flask$ python3 -m pip install pip==22.3.1
-(dlflask3)~/deeplearning_flask$ python3 -m pip install setuptools==65.6.3
+(dlflask3)~/deeplearning_flask$ python3 -m pip install pip==23.0
+(dlflask3)~/deeplearning_flask$ python3 -m pip install setuptools==67.2.0
 (dlflask3)~/deeplearning_flask$ python3 -m pip install -r requirements_dev.txt
 ```
 
@@ -218,7 +218,7 @@ A POST example using [curl] from outside [Docker] container is shown below:
 ## CREDITS
 
 author: alvertogit
-copyright: 2018-2022
+copyright: 2018-2023
 
 [Python]: https://www.python.org/
 [Flask]: https://flask.palletsprojects.com/en/1.1.x/
