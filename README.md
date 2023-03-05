@@ -29,9 +29,9 @@ The code has been tested using:
 * [Docker-Compose] (1.29): a tool for defining and running multi-container [Docker] applications.
 * [Keras] ([TensorFlow] built-in): a high-level neural networks [API], written in [Python] and capable of running on top of [TensorFlow].
 * [TensorFlow] (2.11): an open source software [Deep Learning] library for high performance numerical computation using data flow graphs.
-* [Matplotlib] (3.6): a plotting library for [Python] and its numerical mathematics extension [NumPy].
+* [Matplotlib] (3.7): a plotting library for [Python] and its numerical mathematics extension [NumPy].
 * [NumPy] (1.24): a library for [Python], adding support for large, multi-dimensional arrays and matrices, along with a large collection of high-level mathematical functions to operate on these arrays.
-* [scikit-image] (0.19): a collection of algorithms for image processing with [Python].
+* [scikit-image] (0.20): a collection of algorithms for image processing with [Python].
 
 ### PYTHON VIRTUAL ENVIRONMENT
 
@@ -43,8 +43,8 @@ Command to configure virtual environment with [venv]:
 ```bash
 ~/deeplearning_flask$ python3 -m venv dlflask3
 ~/deeplearning_flask$ source dlflask3/bin/activate
-(dlflask3)~/deeplearning_flask$ python3 -m pip install pip==23.0
-(dlflask3)~/deeplearning_flask$ python3 -m pip install setuptools==67.2.0
+(dlflask3)~/deeplearning_flask$ python3 -m pip install pip==23.0.1
+(dlflask3)~/deeplearning_flask$ python3 -m pip install setuptools==67.4.0
 (dlflask3)~/deeplearning_flask$ python3 -m pip install -r requirements_dev.txt
 ```
 
