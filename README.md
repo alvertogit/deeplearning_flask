@@ -14,7 +14,7 @@ This repository stores a test to demonstrate skills mainly with [Python], [Keras
 
 ## PURPOSE
 
-The goal is to deploy on [Flask] a [deep learning] model as a microservice. The model is used to predict handwritten digits and it has been previously trained on a [Jupyter Notebook]. [REST API] are utilized to communicate with the deployed model. e.g. send image to be analized and return the generated predictions to the client. [GitHub Actions] are employed to implement CI/CD workflows in the project.
+The goal is to deploy on [Flask] a [Deep Learning] model as a microservice. The model is used to predict handwritten digits and it has been previously trained on a [Jupyter Notebook]. [REST API] are utilized to communicate with the deployed model. e.g. send image to be analized and return the generated predictions to the client. [GitHub Actions] are employed to implement CI/CD workflows in the project.
 
 ## DEPENDENCIES
 
@@ -23,10 +23,10 @@ The code has been tested using:
 * [Python] (3.10): an interpreted high-level programming language for general-purpose programming.
 * [Jupyter Lab] (3.6): a web-based interactive development environment for [Jupyter Notebooks], code and data.
 * [Flask] (2.2): a microframework for [Python] based on Werkzeug, Jinja 2 and good intentions.
-* [Gunicorn] (20.1.0): a [Python] [WSGI] HTTP Server for UNIX.
+* [Gunicorn] (20.1): a [Python] [WSGI] HTTP Server for UNIX.
 * [NGINX] (1.23): a free, open-source, high-performance HTTP server, reverse proxy, and IMAP/POP3 proxy server.
 * [Docker] (20.10): an open platform for developers and sysadmins to build, ship, and run distributed applications, whether on laptops, data center VMs, or the cloud.
-* [Docker-Compose] (1.29): a tool for defining and running multi-container [Docker] applications.
+* [Docker Compose] (2.16): a tool for defining and running multi-container [Docker] applications.
 * [Keras] ([TensorFlow] built-in): a high-level neural networks [API], written in [Python] and capable of running on top of [TensorFlow].
 * [TensorFlow] (2.11): an open source software [Deep Learning] library for high performance numerical computation using data flow graphs.
 * [Matplotlib] (3.7): a plotting library for [Python] and its numerical mathematics extension [NumPy].
@@ -44,7 +44,7 @@ Command to configure virtual environment with [venv]:
 ~/deeplearning_flask$ python3 -m venv dlflask3
 ~/deeplearning_flask$ source dlflask3/bin/activate
 (dlflask3)~/deeplearning_flask$ python3 -m pip install pip==23.0.1
-(dlflask3)~/deeplearning_flask$ python3 -m pip install setuptools==67.4.0
+(dlflask3)~/deeplearning_flask$ python3 -m pip install setuptools==67.6.0
 (dlflask3)~/deeplearning_flask$ python3 -m pip install -r requirements_dev.txt
 ```
 
@@ -89,7 +89,7 @@ deeplearning_flask
 
 ## ARCHITECTURE
 
-The architecture created with [docker-compose] uses two different [Docker] containers for:
+The architecture created with [Docker Compose] uses two different [Docker] containers for:
 
 * [NGINX].
 * [Flask] and [Gunicorn].
@@ -107,7 +107,7 @@ flowchart LR;
 
 ## DEEP LEARNING MODEL
 
-The definition and training of the [deep learning] MNIST model was done through a notebook in [Jupyter Lab]. The employed notebook is stored in the main folder, to run it use the command shown below:
+The definition and training of the [Deep Learning] MNIST model was done through a notebook in [Jupyter Lab]. The employed notebook is stored in the main folder, to run it use the command shown below:
 
 ```bash
 (dlflask3)~/deeplearning_flask$ jupyter lab Deep\ Learning\ MNIST\ prediction\ model\ with\ Keras.ipynb
@@ -115,18 +115,18 @@ The definition and training of the [deep learning] MNIST model was done through 
 
 ## HOW TO RUN DEEP LEARNING ON FLASK WITH DOCKER COMPOSE
 
-The steps and commands to run the [deep learning] model on the [Flask] server with [docker-compose] are described below.
+The steps and commands to run the [Deep Learning] model on the [Flask] server with [Docker Compose] are described below.
 
-Before executing [docker-compose] is strongly recommended to close other applications to free up resources and ports to avoid potential issues. Then [docker-compose] can be executed to build services.
+Before executing [Docker Compose] is strongly recommended to close other applications to free up resources and ports to avoid potential issues. Then [Docker Compose] can be executed to build services.
 
 ```bash
-~/deeplearning_flask$ docker-compose build
+~/deeplearning_flask$ docker compose build
 ```
 
-Next step consists in executing [docker-compose] up command.
+Next step consists in executing [Docker Compose] up command.
 
 ```bash
-~/deeplearning_flask$ docker-compose up
+~/deeplearning_flask$ docker compose up
 ```
 
 If everything goes fine at the end it should appear something similar to:
@@ -229,7 +229,7 @@ copyright: 2018-2023
 [microservices]: https://en.wikipedia.org/wiki/Microservices
 [REST API]: https://en.wikipedia.org/wiki/Representational_state_transfer
 [GitHub Actions]: https://github.com/features/actions
-[Docker-Compose]: https://github.com/docker/compose
+[Docker Compose]: https://github.com/docker/compose
 [venv]: https://docs.python.org/3/library/venv.html
 [Jupyter Lab]: https://jupyter.org/
 [Jupyter Notebook]: https://jupyter.org/
