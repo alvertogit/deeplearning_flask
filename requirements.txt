@@ -3,6 +3,6 @@ gunicorn==20.1.0
 numpy==1.24.3
 Pillow==9.5.0
 pytest==7.3.1
-requests==2.30.0
+requests==2.31.0
 scikit-image==0.20.0
 tensorflow==2.11.1
