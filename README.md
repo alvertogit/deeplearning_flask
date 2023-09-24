@@ -26,10 +26,10 @@ The code has been tested using:
 * [Gunicorn] (21.2): a [Python] [WSGI] HTTP Server for UNIX.
 * [NGINX] (1.25): a free, open-source, high-performance HTTP server, reverse proxy, and IMAP/POP3 proxy server.
 * [Docker] (24.0): an open platform for developers and sysadmins to build, ship, and run distributed applications, whether on laptops, data center VMs, or the cloud.
-* [Docker Compose] (2.20): a tool for defining and running multi-container [Docker] applications.
+* [Docker Compose] (2.21): a tool for defining and running multi-container [Docker] applications.
 * [Keras] ([TensorFlow] built-in): a high-level neural networks [API], written in [Python] and capable of running on top of [TensorFlow].
 * [TensorFlow] (2.13): an open source software [Deep Learning] library for high performance numerical computation using data flow graphs.
-* [Matplotlib] (3.7): a plotting library for [Python] and its numerical mathematics extension [NumPy].
+* [Matplotlib] (3.8): a plotting library for [Python] and its numerical mathematics extension [NumPy].
 * [NumPy] (1.23): a library for [Python], adding support for large, multi-dimensional arrays and matrices, along with a large collection of high-level mathematical functions to operate on these arrays.
 * [scikit-image] (0.21): a collection of algorithms for image processing with [Python].
 
@@ -44,7 +44,7 @@ Command to configure virtual environment with [venv]:
 ~/deeplearning_flask$ python3 -m venv dlflask3
 ~/deeplearning_flask$ source dlflask3/bin/activate
 (dlflask3)~/deeplearning_flask$ python3 -m pip install pip==23.2.1
-(dlflask3)~/deeplearning_flask$ python3 -m pip install setuptools==68.0.0
+(dlflask3)~/deeplearning_flask$ python3 -m pip install setuptools==68.2.2
 (dlflask3)~/deeplearning_flask$ python3 -m pip install -r requirements_dev.txt
 ```
 
