@@ -3,7 +3,7 @@ model.py: Functions related to Deep Learning model based on Keras.
 """
 
 __author__      = "alvertogit"
-__copyright__   = "Copyright 2018-2023"
+__copyright__   = "Copyright 2018-2024"
 
 
 from tensorflow.keras.models import load_model

@@ -3,7 +3,7 @@ conftest.py: It contents fixture functions used in tests.
 """
 
 __author__      = "alvertogit"
-__copyright__   = "Copyright 2018-2023"
+__copyright__   = "Copyright 2018-2024"
 
 
 from app import create_app

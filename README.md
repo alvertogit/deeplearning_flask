@@ -43,8 +43,8 @@ Command to configure virtual environment with [venv]:
 ```bash
 ~/deeplearning_flask$ python3 -m venv dlflask3
 ~/deeplearning_flask$ source dlflask3/bin/activate
-(dlflask3)~/deeplearning_flask$ python3 -m pip install pip==23.3.1
-(dlflask3)~/deeplearning_flask$ python3 -m pip install setuptools==68.2.2
+(dlflask3)~/deeplearning_flask$ python3 -m pip install pip==23.3.2
+(dlflask3)~/deeplearning_flask$ python3 -m pip install setuptools==69.0.3
 (dlflask3)~/deeplearning_flask$ python3 -m pip install -r requirements_dev.txt
 ```
 
@@ -218,7 +218,7 @@ A POST example using [curl] from outside [Docker] container is shown below:
 ## CREDITS
 
 author: alvertogit
-copyright: 2018-2023
+copyright: 2018-2024
 
 [Python]: https://www.python.org/
 [Flask]: https://flask.palletsprojects.com/en/1.1.x/
