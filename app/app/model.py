@@ -2,8 +2,8 @@
 model.py: Functions related to Deep Learning model based on Keras.
 """
 
-__author__      = "alvertogit"
-__copyright__   = "Copyright 2018-2024"
+__author__ = "alvertogit"
+__copyright__ = "Copyright 2018-2024"
 
 
 from tensorflow.keras.models import load_model
@@ -23,6 +23,7 @@ def init_model():
     model.make_predict_function()
     return model
 
+
 def preprocess_image(image):
     """Function that preprocess image.
     Returns:
@@ -32,8 +33,8 @@ def preprocess_image(image):
     # invert grayscale image
     image = util.invert(image)
     # resize and reshape image for model
-    image = transform.resize(image, (28,28), anti_aliasing=True, mode="constant")
+    image = transform.resize(image, (28, 28), anti_aliasing=True, mode="constant")
     image = np.array(image)
-    image = image.reshape((1,28*28))
+    image = image.reshape((1, 28 * 28))
 
     return image

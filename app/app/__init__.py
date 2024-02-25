@@ -2,14 +2,15 @@
 __init__.py: Flask server with Deep Learning model.
 """
 
-__author__      = "alvertogit"
-__copyright__   = "Copyright 2018-2020"
+__author__ = "alvertogit"
+__copyright__ = "Copyright 2018-2024"
 
 
 from flask import Flask, render_template
 
 from config import config
 from .model import init_model
+
 
 def create_app(config_name="default"):
     """Create and configure an instance of the Flask application."""
@@ -21,6 +22,7 @@ def create_app(config_name="default"):
         app.config["model"] = init_model()
 
     from .api import api
+
     app.register_blueprint(api, url_prefix="/api")
 
     @app.route("/dlflask", methods=["GET"])

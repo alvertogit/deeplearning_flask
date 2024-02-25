@@ -2,11 +2,12 @@
 config.py: Configurations used by Flask server.
 """
 
-__author__      = "alvertogit"
-__copyright__   = "Copyright 2018-2024"
+__author__ = "alvertogit"
+__copyright__ = "Copyright 2018-2024"
 
 
 import os
+
 
 class DefaultConfig:
     if os.environ.get("SECRET_KEY"):
@@ -41,5 +42,5 @@ config = {
     "development": DevConfig,
     "testing": TestConfig,
     "production": DefaultConfig,
-    "default": DefaultConfig
+    "default": DefaultConfig,
 }

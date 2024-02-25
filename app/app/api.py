@@ -2,8 +2,8 @@
 api.py: api views used by Flask server.
 """
 
-__author__      = "alvertogit"
-__copyright__   = "Copyright 2018-2024"
+__author__ = "alvertogit"
+__copyright__ = "Copyright 2018-2024"
 
 
 import io
@@ -12,7 +12,8 @@ from skimage.io import imread
 from .model import current_app, np, preprocess_image
 
 
-api = Blueprint('api', __name__)
+api = Blueprint("api", __name__)
+
 
 @api.route("/predictlabel", methods=["POST"])
 def predict():
@@ -37,7 +38,7 @@ def predict():
             # add generated predictions to result
             result["predictions"] = []
 
-            for i in range(0,10):
+            for i in range(0, 10):
                 pred = {"label": str(i), "probability": str(preds[0][i])}
                 result["predictions"].append(pred)
 
