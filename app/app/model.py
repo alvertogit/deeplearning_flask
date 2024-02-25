@@ -6,11 +6,10 @@ __author__ = "alvertogit"
 __copyright__ = "Copyright 2018-2024"
 
 
-from tensorflow.keras.models import load_model
-from skimage import transform, util
 import numpy as np
-
 from flask import current_app
+from skimage import transform, util
+from tensorflow.keras.models import load_model
 
 
 def init_model():

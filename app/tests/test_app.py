@@ -22,29 +22,29 @@ def test_api(client):
     IMAGE_PATH = "../app/static/4.jpg"
 
     # create payload with image for request
-    image = open(IMAGE_PATH, "rb")
-    payload = {"file": image}
-    response = client.post(SERVER_URL, data=payload)
+    with open(IMAGE_PATH, "rb") as image:
+        payload = {"file": image}
+        response = client.post(SERVER_URL, data=payload)
 
-    # check response
-    assert response.status_code == 200
+        # check response
+        assert response.status_code == 200
 
-    # JSON format
-    try:
-        json_response = json.loads(response.data.decode("utf8"))
-    except ValueError as e:
-        print(e)
-        assert False
+        # JSON format
+        try:
+            json_response = json.loads(response.data.decode("utf8"))
+        except ValueError as e:
+            print(e)
+            exit(1)
 
-    # successful
-    if json_response["success"]:
-        # most probable label
-        print(json_response["most_probable_label"])
-        # predictions
-        for dic in json_response["predictions"]:
-            print(f"label {dic['label']} probability: {dic['probability']}")
+        # successful
+        if json_response["success"]:
+            # most probable label
+            print(json_response["most_probable_label"])
+            # predictions
+            for dic in json_response["predictions"]:
+                print(f"label {dic['label']} probability: {dic['probability']}")
 
-        assert json_response["most_probable_label"] == "4"
-    # failed
-    else:
-        assert False
+            assert json_response["most_probable_label"] == "4"
+        # failed
+        else:
+            raise AssertionError()

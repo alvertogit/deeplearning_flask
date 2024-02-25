@@ -6,9 +6,9 @@ __author__ = "alvertogit"
 __copyright__ = "Copyright 2018-2024"
 
 
+from config import config
 from flask import Flask, render_template
 
-from config import config
 from .model import init_model
 
 
