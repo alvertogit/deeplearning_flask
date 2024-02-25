@@ -6,9 +6,7 @@ __author__      = "alvertogit"
 __copyright__   = "Copyright 2018-2024"
 
 
-import pytest
 import json
-import sys
 
 def test_index(client):
     response = client.get("/")
@@ -42,8 +40,8 @@ def test_api(client):
         print(json_response["most_probable_label"])
         # predictions
         for dic in json_response["predictions"]:
-            print("label {0} probability: {1}".format(dic["label"],dic["probability"]))
-        
+            print(f"label {dic['label']} probability: {dic['probability']}")
+
         assert json_response["most_probable_label"] == "4"
     # failed
     else:

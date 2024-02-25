@@ -6,12 +6,10 @@ __author__      = "alvertogit"
 __copyright__   = "Copyright 2018-2024"
 
 
-from flask import Blueprint, jsonify, request
-
-from skimage.io import imread
 import io
-
-from .model import *
+from flask import Blueprint, jsonify, request
+from skimage.io import imread
+from .model import current_app, np, preprocess_image
 
 
 api = Blueprint('api', __name__)
@@ -35,7 +33,7 @@ def predict():
             # classify the input image generating a list of predictions
             model = current_app.config["model"]
             preds = model.predict(preprocessed_image)
-            
+
             # add generated predictions to result
             result["predictions"] = []
 

@@ -18,7 +18,7 @@ def init_model():
     Returns:
         model: Loaded Deep Learning model.
     """
-    
+
     model = load_model(current_app.config["MODEL_PATH"])
     model.make_predict_function()
     return model
