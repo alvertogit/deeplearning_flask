@@ -1,6 +1,11 @@
+[tool.ruff]
+extend-include = ["*.ipynb"]
+
 line-length = 100
 target-version = "py310"
-lint.select = [
+
+[tool.ruff.lint]
+select = [
     # pycodestyle
     "E",
     "W",
@@ -15,4 +20,3 @@ lint.select = [
     # isort
     "I",
 ]
-extend-include = ["*.ipynb"]

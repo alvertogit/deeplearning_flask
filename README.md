@@ -31,6 +31,7 @@ The code has been tested using:
 * [TensorFlow] (2.15): an open source software [Deep Learning] library for high performance numerical computation using data flow graphs.
 * [Matplotlib] (3.8): a plotting library for [Python] and its numerical mathematics extension [NumPy].
 * [NumPy] (1.26): a library for [Python], adding support for large, multi-dimensional arrays and matrices, along with a large collection of high-level mathematical functions to operate on these arrays.
+* [Ruff] (0.3): An extremely fast Python linter and code formatter, written in Rust.
 * [scikit-image] (0.22): a collection of algorithms for image processing with [Python].
 
 ### PYTHON VIRTUAL ENVIRONMENT
@@ -44,7 +45,7 @@ Command to configure virtual environment with [venv]:
 ~/deeplearning_flask$ python3 -m venv dlflask3
 ~/deeplearning_flask$ source dlflask3/bin/activate
 (dlflask3)~/deeplearning_flask$ python3 -m pip install pip==24.0
-(dlflask3)~/deeplearning_flask$ python3 -m pip install setuptools==69.1.0
+(dlflask3)~/deeplearning_flask$ python3 -m pip install setuptools==69.1.1
 (dlflask3)~/deeplearning_flask$ python3 -m pip install -r requirements_dev.txt
 ```
 
@@ -59,6 +60,7 @@ deeplearning_flask
 ├── .github
 │   └── workflows
 │       └── ci_tests.yml
+├── .gitignore
 ├── app
 │   ├── app
 │   │   ├── __init__.py
@@ -82,6 +84,7 @@ deeplearning_flask
 ├── nginx
 │   └── conf.d
 │       └── local.conf
+├── pyproject.toml
 ├── README.md
 ├── requirements.txt
 └── requirements_dev.txt
@@ -243,3 +246,4 @@ copyright: 2018-2024
 [curl]: https://curl.haxx.se/
 [pytest]: https://docs.pytest.org/en/latest/
 [Makefile]: https://en.wikipedia.org/wiki/Makefile
+[Ruff]: https://docs.astral.sh/ruff/
