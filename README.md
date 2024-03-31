@@ -25,10 +25,10 @@ The code has been tested using:
 * [Flask] (3.0): a microframework for [Python] based on Werkzeug, Jinja 2 and good intentions.
 * [Gunicorn] (21.2): a [Python] [WSGI] HTTP Server for UNIX.
 * [NGINX] (1.25): a free, open-source, high-performance HTTP server, reverse proxy, and IMAP/POP3 proxy server.
-* [Docker] (25.0): an open platform for developers and sysadmins to build, ship, and run distributed applications, whether on laptops, data center VMs, or the cloud.
-* [Docker Compose] (2.24): a tool for defining and running multi-container [Docker] applications.
+* [Docker] (26.0): an open platform for developers and sysadmins to build, ship, and run distributed applications, whether on laptops, data center VMs, or the cloud.
+* [Docker Compose] (2.25): a tool for defining and running multi-container [Docker] applications.
 * [Keras] ([TensorFlow] built-in): a high-level neural networks [API], written in [Python] and capable of running on top of [TensorFlow].
-* [TensorFlow] (2.15): an open source software [Deep Learning] library for high performance numerical computation using data flow graphs.
+* [TensorFlow] (2.16): an open source software [Deep Learning] library for high performance numerical computation using data flow graphs.
 * [Matplotlib] (3.8): a plotting library for [Python] and its numerical mathematics extension [NumPy].
 * [NumPy] (1.26): a library for [Python], adding support for large, multi-dimensional arrays and matrices, along with a large collection of high-level mathematical functions to operate on these arrays.
 * [Ruff] (0.3): An extremely fast Python linter and code formatter, written in Rust.
@@ -45,7 +45,7 @@ Command to configure virtual environment with [venv]:
 ~/deeplearning_flask$ python3 -m venv dlflask3
 ~/deeplearning_flask$ source dlflask3/bin/activate
 (dlflask3)~/deeplearning_flask$ python3 -m pip install pip==24.0
-(dlflask3)~/deeplearning_flask$ python3 -m pip install setuptools==69.1.1
+(dlflask3)~/deeplearning_flask$ python3 -m pip install setuptools==69.2.0
 (dlflask3)~/deeplearning_flask$ python3 -m pip install -r requirements_dev.txt
 ```
 
@@ -72,7 +72,7 @@ deeplearning_flask
 │   │       └── dlflask.html
 │   ├── config.py
 │   ├── Makefile
-│   ├── mnist_model.h5
+│   ├── mnist_model.keras
 │   ├── server.py
 │   └── tests
 │       ├── __init__.py
@@ -158,7 +158,12 @@ It is possible to execute tests of [Flask] microservice created with [pytest] fr
 ~/deeplearning_flask$ docker exec -it deeplearning_flask-web-1 /bin/bash
 ~/app# make test
 ...
-test_app.py ..                                                         [100%]
+============================= test session starts ==============================
+platform linux -- Python 3.10.14, pytest-8.1.1, pluggy-1.4.0
+rootdir: /app/tests
+collected 2 items
+
+test_app.py ..                                                           [100%]
 ```
 
 Those tests are also automatically executed with CI/CD workflows implemented with [GitHub Actions] for every push and pull request in the project repository.
@@ -171,50 +176,50 @@ A POST example using [curl] from outside [Docker] container is shown below:
                                  Dload  Upload   Total   Spent    Left  Speed
 100 11650  100   489  100 11161    321   7347  0:00:01  0:00:01 --:--:--  7664
 {
-  "most_probable_label": "4",
-  "predictions": [
-    {
-      "label": "0",
-      "probability": "8.025511e-09"
-    },
-    {
-      "label": "1",
-      "probability": "1.9455256e-05"
-    },
-    {
-      "label": "2",
-      "probability": "1.4459256e-05"
-    },
-    {
-      "label": "3",
-      "probability": "9.0475e-06"
-    },
-    {
-      "label": "4",
-      "probability": "0.9971827"
-    },
-    {
-      "label": "5",
-      "probability": "7.5980934e-06"
-    },
-    {
-      "label": "6",
-      "probability": "1.1683321e-06"
-    },
-    {
-      "label": "7",
-      "probability": "0.0018591178"
-    },
-    {
-      "label": "8",
-      "probability": "0.0005154088"
-    },
-    {
-      "label": "9",
-      "probability": "0.00039107347"
-    }
-  ],
-  "success": true
+   "most_probable_label" : "4",
+   "predictions" : [
+      {
+         "label" : "0",
+         "probability" : "8.270098e-08"
+      },
+      {
+         "label" : "1",
+         "probability" : "0.00016669065"
+      },
+      {
+         "label" : "2",
+         "probability" : "4.821898e-05"
+      },
+      {
+         "label" : "3",
+         "probability" : "2.3290573e-05"
+      },
+      {
+         "label" : "4",
+         "probability" : "0.99914443"
+      },
+      {
+         "label" : "5",
+         "probability" : "1.4074722e-06"
+      },
+      {
+         "label" : "6",
+         "probability" : "2.4940262e-05"
+      },
+      {
+         "label" : "7",
+         "probability" : "0.0004908524"
+      },
+      {
+         "label" : "8",
+         "probability" : "4.4384862e-05"
+      },
+      {
+         "label" : "9",
+         "probability" : "5.569217e-05"
+      }
+   ],
+   "success" : true
 }
 ```
 
