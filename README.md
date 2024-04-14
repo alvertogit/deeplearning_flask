@@ -20,33 +20,32 @@ The goal is to deploy on [Flask] a [Deep Learning] model as a microservice. The 
 
 The code has been tested using:
 
-* [Python] (3.10): an interpreted high-level programming language for general-purpose programming.
-* [Jupyter Lab] (4.1): a web-based interactive development environment for [Jupyter Notebooks], code and data.
-* [Flask] (3.0): a microframework for [Python] based on Werkzeug, Jinja 2 and good intentions.
-* [Gunicorn] (21.2): a [Python] [WSGI] HTTP Server for UNIX.
-* [NGINX] (1.25): a free, open-source, high-performance HTTP server, reverse proxy, and IMAP/POP3 proxy server.
-* [Docker] (26.0): an open platform for developers and sysadmins to build, ship, and run distributed applications, whether on laptops, data center VMs, or the cloud.
-* [Docker Compose] (2.25): a tool for defining and running multi-container [Docker] applications.
-* [Keras] ([TensorFlow] built-in): a high-level neural networks [API], written in [Python] and capable of running on top of [TensorFlow].
-* [TensorFlow] (2.16): an open source software [Deep Learning] library for high performance numerical computation using data flow graphs.
-* [Matplotlib] (3.8): a plotting library for [Python] and its numerical mathematics extension [NumPy].
-* [NumPy] (1.26): a library for [Python], adding support for large, multi-dimensional arrays and matrices, along with a large collection of high-level mathematical functions to operate on these arrays.
-* [Ruff] (0.3): An extremely fast Python linter and code formatter, written in Rust.
-* [scikit-image] (0.22): a collection of algorithms for image processing with [Python].
+- [Python] (3.10): an interpreted high-level programming language for general-purpose programming.
+- [Jupyter Lab] (4.1): a web-based interactive development environment for [Jupyter Notebooks], code and data.
+- [Flask] (3.0): a microframework for [Python] based on Werkzeug, Jinja 2 and good intentions.
+- [Gunicorn] (21.2): a [Python] [WSGI] HTTP Server for UNIX.
+- [NGINX] (1.25): a free, open-source, high-performance HTTP server, reverse proxy, and IMAP/POP3 proxy server.
+- [Docker] (26.0): an open platform for developers and sysadmins to build, ship, and run distributed applications, whether on laptops, data center VMs, or the cloud.
+- [Docker Compose] (2.26): a tool for defining and running multi-container [Docker] applications.
+- [Keras] ([TensorFlow] built-in): a high-level neural networks [API], written in [Python] and capable of running on top of [TensorFlow].
+- [TensorFlow] (2.16): an open source software [Deep Learning] library for high performance numerical computation using data flow graphs.
+- [Matplotlib] (3.8): a plotting library for [Python] and its numerical mathematics extension [NumPy].
+- [NumPy] (1.26): a library for [Python], adding support for large, multi-dimensional arrays and matrices, along with a large collection of high-level mathematical functions to operate on these arrays.
+- [Ruff] (0.3): An extremely fast Python linter and code formatter, written in Rust.
+- [scikit-image] (0.23): a collection of algorithms for image processing with [Python].
 
 ### PYTHON VIRTUAL ENVIRONMENT
 
-Virtual environment (<env_name>=**dlflask3**) can be generated from **requirements_dev.txt** file located in the repository.
-
+Virtual environment (<env_name>=**.venv**) can be generated from **requirements_dev.txt** file located in the repository.
 
 Command to configure virtual environment with [venv]:
 
 ```bash
-~/deeplearning_flask$ python3 -m venv dlflask3
-~/deeplearning_flask$ source dlflask3/bin/activate
-(dlflask3)~/deeplearning_flask$ python3 -m pip install pip==24.0
-(dlflask3)~/deeplearning_flask$ python3 -m pip install setuptools==69.2.0
-(dlflask3)~/deeplearning_flask$ python3 -m pip install -r requirements_dev.txt
+~/deeplearning_flask$ python3 -m venv .venv
+~/deeplearning_flask$ source .venv/bin/activate
+(.venv)~/deeplearning_flask$ python3 -m pip install pip==24.0
+(.venv)~/deeplearning_flask$ python3 -m pip install setuptools==69.5.1
+(.venv)~/deeplearning_flask$ python3 -m pip install -r requirements_dev.txt
 ```
 
 ## REPOSITORY CONTENT
@@ -94,8 +93,8 @@ deeplearning_flask
 
 The architecture created with [Docker Compose] uses two different [Docker] containers for:
 
-* [NGINX].
-* [Flask] and [Gunicorn].
+- [NGINX].
+- [Flask] and [Gunicorn].
 
 The following diagram illustrates the architecture in blocks:
 
@@ -113,7 +112,7 @@ flowchart LR;
 The definition and training of the [Deep Learning] MNIST model was done through a notebook in [Jupyter Lab]. The employed notebook is stored in the main folder, to run it use the command shown below:
 
 ```bash
-(dlflask3)~/deeplearning_flask$ jupyter lab Deep\ Learning\ MNIST\ prediction\ model\ with\ Keras.ipynb
+(.venv)~/deeplearning_flask$ jupyter lab Deep\ Learning\ MNIST\ prediction\ model\ with\ Keras.ipynb
 ```
 
 ## HOW TO RUN DEEP LEARNING ON FLASK WITH DOCKER COMPOSE
