@@ -1,9 +1,9 @@
 Flask==3.0.3
-gunicorn==21.2.0
+gunicorn==22.0.0
 numpy==1.26.4
 Pillow==10.3.0
 pytest==8.1.1
 requests==2.31.0
-ruff==0.3.7
-scikit-image==0.23.1
+ruff==0.4.1
+scikit-image==0.23.2
 tensorflow==2.16.1

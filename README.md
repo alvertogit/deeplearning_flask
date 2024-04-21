@@ -23,7 +23,7 @@ The code has been tested using:
 - [Python] (3.10): an interpreted high-level programming language for general-purpose programming.
 - [Jupyter Lab] (4.1): a web-based interactive development environment for [Jupyter Notebooks], code and data.
 - [Flask] (3.0): a microframework for [Python] based on Werkzeug, Jinja 2 and good intentions.
-- [Gunicorn] (21.2): a [Python] [WSGI] HTTP Server for UNIX.
+- [Gunicorn] (22.0): a [Python] [WSGI] HTTP Server for UNIX.
 - [NGINX] (1.25): a free, open-source, high-performance HTTP server, reverse proxy, and IMAP/POP3 proxy server.
 - [Docker] (26.0): an open platform for developers and sysadmins to build, ship, and run distributed applications, whether on laptops, data center VMs, or the cloud.
 - [Docker Compose] (2.26): a tool for defining and running multi-container [Docker] applications.
@@ -31,7 +31,7 @@ The code has been tested using:
 - [TensorFlow] (2.16): an open source software [Deep Learning] library for high performance numerical computation using data flow graphs.
 - [Matplotlib] (3.8): a plotting library for [Python] and its numerical mathematics extension [NumPy].
 - [NumPy] (1.26): a library for [Python], adding support for large, multi-dimensional arrays and matrices, along with a large collection of high-level mathematical functions to operate on these arrays.
-- [Ruff] (0.3): An extremely fast Python linter and code formatter, written in Rust.
+- [Ruff] (0.4): An extremely fast Python linter and code formatter, written in Rust.
 - [scikit-image] (0.23): a collection of algorithms for image processing with [Python].
 
 ### PYTHON VIRTUAL ENVIRONMENT
