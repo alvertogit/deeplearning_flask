@@ -13,9 +13,11 @@ from tensorflow.keras.models import load_model
 
 
 def init_model():
-    """Function that loads Deep Learning model.
+    """
+    Load the pre-trained Deep Learning model.
+
     Returns:
-        model: Loaded Deep Learning model.
+        model (tensorflow.keras.Model): The loaded Deep Learning model.
     """
 
     model = load_model(current_app.config["MODEL_PATH"])
@@ -24,16 +26,22 @@ def init_model():
 
 
 def preprocess_image(image):
-    """Function that preprocess image.
+    """
+    Preprocess an image for the Deep Learning model.
+
+    Args:
+        image (numpy.ndarray): The input image.
+
     Returns:
-        image: Preprocessed image.
+        preprocessed_image (numpy.ndarray): The preprocessed image.
     """
 
     # invert grayscale image
-    image = util.invert(image)
-    # resize and reshape image for model
-    image = transform.resize(image, (28, 28), anti_aliasing=True, mode="constant")
-    image = np.array(image)
-    image = image.reshape((1, 28 * 28))
+    inverted_image = util.invert(image)
 
-    return image
+    # resize and reshape image
+    resized_image = transform.resize(inverted_image, (28, 28), anti_aliasing=True, mode="constant")
+    resized_image = np.array(resized_image)
+    preprocessed_image = resized_image.reshape((1, 28 * 28))
+
+    return preprocessed_image
