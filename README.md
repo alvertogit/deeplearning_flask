@@ -20,7 +20,7 @@ The goal is to deploy on [Flask] a [Deep Learning] model as a microservice. The 
 
 The code has been tested using:
 
-- [Python] (3.10): an interpreted high-level programming language for general-purpose programming.
+- [Python] (3.12): an interpreted high-level programming language for general-purpose programming.
 - [Jupyter Lab] (4.1): a web-based interactive development environment for [Jupyter Notebooks], code and data.
 - [Flask] (3.0): a microframework for [Python] based on Werkzeug, Jinja 2 and good intentions.
 - [Gunicorn] (22.0): a [Python] [WSGI] HTTP Server for UNIX.
@@ -158,7 +158,7 @@ It is possible to execute tests of [Flask] microservice created with [pytest] fr
 ~/app# make test
 ...
 ============================= test session starts ==============================
-platform linux -- Python 3.10.14, pytest-8.1.2, pluggy-1.5.0
+platform linux -- Python 3.12.3, pytest-8.2.0, pluggy-1.5.0
 rootdir: /app/tests
 collected 2 items
 
