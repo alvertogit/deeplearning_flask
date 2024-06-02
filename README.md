@@ -24,12 +24,12 @@ The code has been tested using:
 - [Jupyter Lab] (4.2): a web-based interactive development environment for [Jupyter Notebooks], code and data.
 - [Flask] (3.0): a microframework for [Python] based on Werkzeug, Jinja 2 and good intentions.
 - [Gunicorn] (22.0): a [Python] [WSGI] HTTP Server for UNIX.
-- [NGINX] (1.25): a free, open-source, high-performance HTTP server, reverse proxy, and IMAP/POP3 proxy server.
+- [NGINX] (1.27): a free, open-source, high-performance HTTP server, reverse proxy, and IMAP/POP3 proxy server.
 - [Docker] (26.1): an open platform for developers and sysadmins to build, ship, and run distributed applications, whether on laptops, data center VMs, or the cloud.
 - [Docker Compose] (2.27): a tool for defining and running multi-container [Docker] applications.
 - [Keras] ([TensorFlow] built-in): a high-level neural networks [API], written in [Python] and capable of running on top of [TensorFlow].
 - [TensorFlow] (2.16): an open source software [Deep Learning] library for high performance numerical computation using data flow graphs.
-- [Matplotlib] (3.8): a plotting library for [Python] and its numerical mathematics extension [NumPy].
+- [Matplotlib] (3.9): a plotting library for [Python] and its numerical mathematics extension [NumPy].
 - [NumPy] (1.26): a library for [Python], adding support for large, multi-dimensional arrays and matrices, along with a large collection of high-level mathematical functions to operate on these arrays.
 - [Ruff] (0.4): An extremely fast Python linter and code formatter, written in Rust.
 - [scikit-image] (0.23): a collection of algorithms for image processing with [Python].
@@ -44,7 +44,7 @@ Command to configure virtual environment with [venv]:
 ~/deeplearning_flask$ python3 -m venv .venv
 ~/deeplearning_flask$ source .venv/bin/activate
 (.venv)~/deeplearning_flask$ python3 -m pip install pip==24.0
-(.venv)~/deeplearning_flask$ python3 -m pip install setuptools==69.5.1
+(.venv)~/deeplearning_flask$ python3 -m pip install setuptools==70.0.0
 (.venv)~/deeplearning_flask$ python3 -m pip install -r requirements_dev.txt
 ```
 
@@ -158,7 +158,7 @@ It is possible to execute tests of [Flask] microservice created with [pytest] fr
 ~/app# make test
 ...
 ============================= test session starts ==============================
-platform linux -- Python 3.12.3, pytest-8.2.0, pluggy-1.5.0
+platform linux -- Python 3.12.3, pytest-8.2.1, pluggy-1.5.0
 rootdir: /app/tests
 collected 2 items
 
