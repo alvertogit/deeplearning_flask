@@ -32,7 +32,7 @@ The code has been tested using:
 - [Matplotlib] (3.9): a plotting library for [Python] and its numerical mathematics extension [NumPy].
 - [NumPy] (1.26): a library for [Python], adding support for large, multi-dimensional arrays and matrices, along with a large collection of high-level mathematical functions to operate on these arrays.
 - [Ruff] (0.4): An extremely fast Python linter and code formatter, written in Rust.
-- [scikit-image] (0.23): a collection of algorithms for image processing with [Python].
+- [scikit-image] (0.24): a collection of algorithms for image processing with [Python].
 
 ### PYTHON VIRTUAL ENVIRONMENT
 
@@ -43,8 +43,8 @@ Command to configure virtual environment with [venv]:
 ```bash
 ~/deeplearning_flask$ python3 -m venv .venv
 ~/deeplearning_flask$ source .venv/bin/activate
-(.venv)~/deeplearning_flask$ python3 -m pip install pip==24.0
-(.venv)~/deeplearning_flask$ python3 -m pip install setuptools==70.0.0
+(.venv)~/deeplearning_flask$ python3 -m pip install pip==24.1
+(.venv)~/deeplearning_flask$ python3 -m pip install setuptools==70.1.0
 (.venv)~/deeplearning_flask$ python3 -m pip install -r requirements_dev.txt
 ```
 
@@ -158,7 +158,7 @@ It is possible to execute tests of [Flask] microservice created with [pytest] fr
 ~/app# make test
 ...
 ============================= test session starts ==============================
-platform linux -- Python 3.12.3, pytest-8.2.1, pluggy-1.5.0
+platform linux -- Python 3.12.4, pytest-8.2.2, pluggy-1.5.0
 rootdir: /app/tests
 collected 2 items
 
