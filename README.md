@@ -25,13 +25,13 @@ The code has been tested using:
 - [Flask] (3.0): a microframework for [Python] based on Werkzeug, Jinja 2 and good intentions.
 - [Gunicorn] (22.0): a [Python] [WSGI] HTTP Server for UNIX.
 - [NGINX] (1.27): a free, open-source, high-performance HTTP server, reverse proxy, and IMAP/POP3 proxy server.
-- [Docker] (26.1): an open platform for developers and sysadmins to build, ship, and run distributed applications, whether on laptops, data center VMs, or the cloud.
-- [Docker Compose] (2.27): a tool for defining and running multi-container [Docker] applications.
+- [Docker] (27.0): an open platform for developers and sysadmins to build, ship, and run distributed applications, whether on laptops, data center VMs, or the cloud.
+- [Docker Compose] (2.28): a tool for defining and running multi-container [Docker] applications.
 - [Keras] ([TensorFlow] built-in): a high-level neural networks [API], written in [Python] and capable of running on top of [TensorFlow].
-- [TensorFlow] (2.16): an open source software [Deep Learning] library for high performance numerical computation using data flow graphs.
+- [TensorFlow] (2.17): an open source software [Deep Learning] library for high performance numerical computation using data flow graphs.
 - [Matplotlib] (3.9): a plotting library for [Python] and its numerical mathematics extension [NumPy].
 - [NumPy] (1.26): a library for [Python], adding support for large, multi-dimensional arrays and matrices, along with a large collection of high-level mathematical functions to operate on these arrays.
-- [Ruff] (0.4): An extremely fast Python linter and code formatter, written in Rust.
+- [Ruff] (0.5): An extremely fast Python linter and code formatter, written in Rust.
 - [scikit-image] (0.24): a collection of algorithms for image processing with [Python].
 
 ### PYTHON VIRTUAL ENVIRONMENT
@@ -43,8 +43,8 @@ Command to configure virtual environment with [venv]:
 ```bash
 ~/deeplearning_flask$ python3 -m venv .venv
 ~/deeplearning_flask$ source .venv/bin/activate
-(.venv)~/deeplearning_flask$ python3 -m pip install pip==24.1
-(.venv)~/deeplearning_flask$ python3 -m pip install setuptools==70.1.0
+(.venv)~/deeplearning_flask$ python3 -m pip install pip==24.1.2
+(.venv)~/deeplearning_flask$ python3 -m pip install setuptools==70.3.0
 (.venv)~/deeplearning_flask$ python3 -m pip install -r requirements_dev.txt
 ```
 
