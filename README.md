@@ -44,8 +44,9 @@ Command to configure virtual environment with [venv]:
 ~/deeplearning_flask$ python3 -m venv .venv
 ~/deeplearning_flask$ source .venv/bin/activate
 (.venv)~/deeplearning_flask$ python3 -m pip install pip==24.1.2
-(.venv)~/deeplearning_flask$ python3 -m pip install setuptools==70.3.0
+(.venv)~/deeplearning_flask$ python3 -m pip install setuptools==71.1.0
 (.venv)~/deeplearning_flask$ python3 -m pip install -r requirements_dev.txt
+(.venv)~/deeplearning_flask$ pre-commit install
 ```
 
 ## REPOSITORY CONTENT
@@ -60,6 +61,7 @@ deeplearning_flask
 │   └── workflows
 │       └── ci_tests.yml
 ├── .gitignore
+├── .pre-commit-config.yaml
 ├── app
 │   ├── app
 │   │   ├── __init__.py
@@ -158,7 +160,7 @@ It is possible to execute tests of [Flask] microservice created with [pytest] fr
 ~/app# make test
 ...
 ============================= test session starts ==============================
-platform linux -- Python 3.12.4, pytest-8.2.2, pluggy-1.5.0
+platform linux -- Python 3.12.4, pytest-8.3.2, pluggy-1.5.0
 rootdir: /app/tests
 collected 2 items
 
