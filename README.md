@@ -160,7 +160,7 @@ It is possible to execute tests of [Flask] microservice created with [pytest] fr
 ~/app# make test
 ...
 ============================= test session starts ==============================
-platform linux -- Python 3.12.4, pytest-8.3.2, pluggy-1.5.0
+platform linux -- Python 3.12.5, pytest-8.3.2, pluggy-1.5.0
 rootdir: /app/tests
 collected 2 items
 
