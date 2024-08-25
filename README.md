@@ -44,7 +44,7 @@ Command to configure virtual environment with [venv]:
 ~/deeplearning_flask$ python3 -m venv .venv
 ~/deeplearning_flask$ source .venv/bin/activate
 (.venv)~/deeplearning_flask$ python3 -m pip install pip==24.2
-(.venv)~/deeplearning_flask$ python3 -m pip install setuptools==72.2.0
+(.venv)~/deeplearning_flask$ python3 -m pip install setuptools==73.0.1
 (.venv)~/deeplearning_flask$ python3 -m pip install -r requirements_dev.txt
 (.venv)~/deeplearning_flask$ pre-commit install
 ```
