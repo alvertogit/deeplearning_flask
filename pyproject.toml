@@ -1,3 +1,18 @@
+[project]
+name = "deeplearning_flask"
+version = "1.0.0"
+authors = [
+  { name="alvertogit" },
+]
+description = "An example project combining Deep Learning and Flask"
+readme = "README.md"
+classifiers = [
+    "Programming Language :: Python :: 3",
+]
+
+[project.urls]
+Homepage = "https://github.com/alvertogit/deeplearning_flask"
+
 [tool.ruff]
 extend-include = ["*.ipynb"]
 
