@@ -25,7 +25,7 @@ The code has been tested using:
 - [Flask] (3.0): a microframework for [Python] based on Werkzeug, Jinja 2 and good intentions.
 - [Gunicorn] (23.0): a [Python] [WSGI] HTTP Server for UNIX.
 - [NGINX] (1.27): a free, open-source, high-performance HTTP server, reverse proxy, and IMAP/POP3 proxy server.
-- [Docker] (27.2): an open platform for developers and sysadmins to build, ship, and run distributed applications, whether on laptops, data center VMs, or the cloud.
+- [Docker] (27.3): an open platform for developers and sysadmins to build, ship, and run distributed applications, whether on laptops, data center VMs, or the cloud.
 - [Docker Compose] (2.29): a tool for defining and running multi-container [Docker] applications.
 - [Keras] ([TensorFlow] built-in): a high-level neural networks [API], written in [Python] and capable of running on top of [TensorFlow].
 - [TensorFlow] (2.17): an open source software [Deep Learning] library for high performance numerical computation using data flow graphs.
@@ -44,7 +44,7 @@ Command to configure virtual environment with [venv]:
 ~/deeplearning_flask$ python3 -m venv .venv
 ~/deeplearning_flask$ source .venv/bin/activate
 (.venv)~/deeplearning_flask$ python3 -m pip install pip==24.2
-(.venv)~/deeplearning_flask$ python3 -m pip install setuptools==74.1.2
+(.venv)~/deeplearning_flask$ python3 -m pip install setuptools==75.1.0
 (.venv)~/deeplearning_flask$ python3 -m pip install -r requirements_dev.txt
 (.venv)~/deeplearning_flask$ pre-commit install
 ```
