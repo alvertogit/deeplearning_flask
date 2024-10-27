@@ -8,7 +8,7 @@ RUN mkdir -p /app
 WORKDIR /app
 COPY requirements.txt /app
 RUN python3 -m venv .
-RUN python3 -m pip install pip==24.2
+RUN python3 -m pip install pip==24.3
 RUN python3 -m pip install setuptools==75.2.0
 RUN python3 -m pip install --no-cache-dir -r requirements.txt
 COPY ./app /app
