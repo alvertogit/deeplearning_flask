@@ -21,7 +21,7 @@ The goal is to deploy on [Flask] a [Deep Learning] model as a microservice. The 
 The code has been tested using:
 
 - [Python] (3.12): an interpreted high-level programming language for general-purpose programming.
-- [Jupyter Lab] (4.2): a web-based interactive development environment for [Jupyter Notebooks], code and data.
+- [Jupyter Lab] (4.3): a web-based interactive development environment for [Jupyter Notebooks], code and data.
 - [Flask] (3.0): a microframework for [Python] based on Werkzeug, Jinja 2 and good intentions.
 - [Gunicorn] (23.0): a [Python] [WSGI] HTTP Server for UNIX.
 - [NGINX] (1.27): a free, open-source, high-performance HTTP server, reverse proxy, and IMAP/POP3 proxy server.
@@ -43,8 +43,8 @@ Command to configure virtual environment with [venv]:
 ```bash
 ~/deeplearning_flask$ python3 -m venv .venv
 ~/deeplearning_flask$ source .venv/bin/activate
-(.venv)~/deeplearning_flask$ python3 -m pip install pip==24.3
-(.venv)~/deeplearning_flask$ python3 -m pip install setuptools==75.2.0
+(.venv)~/deeplearning_flask$ python3 -m pip install pip==24.3.1
+(.venv)~/deeplearning_flask$ python3 -m pip install setuptools==75.3.0
 (.venv)~/deeplearning_flask$ python3 -m pip install -r requirements_dev.txt
 (.venv)~/deeplearning_flask$ pre-commit install
 ```
@@ -58,33 +58,33 @@ deeplearning_flask
 ├── .env.example
 ├── .env.test
 ├── .github
-│   └── workflows
-│       └── ci_tests.yml
+│   └── workflows
+│       └── ci_tests.yml
 ├── .gitignore
 ├── .pre-commit-config.yaml
 ├── app
-│   ├── app
-│   │   ├── __init__.py
-│   │   ├── api.py
-│   │   ├── model.py
-│   │   ├── static
-│   │   │   └── 4.jpg
-│   │   └── templates
-│   │       └── dlflask.html
-│   ├── config.py
-│   ├── Makefile
-│   ├── mnist_model.keras
-│   ├── server.py
-│   └── tests
-│       ├── __init__.py
-│       ├── conftest.py
-│       └── test_app.py
+│   ├── app
+│   │   ├── __init__.py
+│   │   ├── api.py
+│   │   ├── model.py
+│   │   ├── static
+│   │   │   └── 4.jpg
+│   │   └── templates
+│   │       └── dlflask.html
+│   ├── config.py
+│   ├── Makefile
+│   ├── mnist_model.keras
+│   ├── server.py
+│   └── tests
+│       ├── __init__.py
+│       ├── conftest.py
+│       └── test_app.py
 ├── Deep Learning MNIST prediction model with Keras.ipynb
 ├── docker-compose.yml
 ├── Dockerfile
 ├── nginx
-│   └── conf.d
-│       └── local.conf
+│   └── conf.d
+│       └── local.conf
 ├── pyproject.toml
 ├── README.md
 ├── requirements.txt
