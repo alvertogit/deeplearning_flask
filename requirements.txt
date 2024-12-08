@@ -4,8 +4,8 @@ numpy==2.0.2
 Pillow==11.0.0
 pre-commit==4.0.1
 pur==7.3.2
-pytest==8.3.3
+pytest==8.3.4
 requests==2.32.3
-ruff==0.8.1
+ruff==0.8.2
 scikit-image==0.24.0
 tensorflow==2.18.0
