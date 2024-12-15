@@ -25,14 +25,14 @@ The code has been tested using:
 - [Flask] (3.1): a microframework for [Python] based on Werkzeug, Jinja 2 and good intentions.
 - [Gunicorn] (23.0): a [Python] [WSGI] HTTP Server for UNIX.
 - [NGINX] (1.27): a free, open-source, high-performance HTTP server, reverse proxy, and IMAP/POP3 proxy server.
-- [Docker] (27.3): an open platform for developers and sysadmins to build, ship, and run distributed applications, whether on laptops, data center VMs, or the cloud.
-- [Docker Compose] (2.29): a tool for defining and running multi-container [Docker] applications.
+- [Docker] (27.4): an open platform for developers and sysadmins to build, ship, and run distributed applications, whether on laptops, data center VMs, or the cloud.
+- [Docker Compose] (2.31): a tool for defining and running multi-container [Docker] applications.
 - [Keras] ([TensorFlow] built-in): a high-level neural networks [API], written in [Python] and capable of running on top of [TensorFlow].
 - [TensorFlow] (2.18): an open source software [Deep Learning] library for high performance numerical computation using data flow graphs.
-- [Matplotlib] (3.9): a plotting library for [Python] and its numerical mathematics extension [NumPy].
+- [Matplotlib] (3.10): a plotting library for [Python] and its numerical mathematics extension [NumPy].
 - [NumPy] (2.0): a library for [Python], adding support for large, multi-dimensional arrays and matrices, along with a large collection of high-level mathematical functions to operate on these arrays.
 - [Ruff] (0.8): An extremely fast Python linter and code formatter, written in Rust.
-- [scikit-image] (0.24): a collection of algorithms for image processing with [Python].
+- [scikit-image] (0.25): a collection of algorithms for image processing with [Python].
 
 ### PYTHON VIRTUAL ENVIRONMENT
 
