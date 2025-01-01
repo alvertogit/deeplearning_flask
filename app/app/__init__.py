@@ -3,7 +3,7 @@ __init__.py: Flask server with Deep Learning model.
 """
 
 __author__ = "alvertogit"
-__copyright__ = "Copyright 2018-2024"
+__copyright__ = "Copyright 2018-2025"
 
 
 from config import config
@@ -13,7 +13,7 @@ from .api import api
 from .model import init_model
 
 
-def create_app(config_name="default"):
+def create_app(config_name: str = "default") -> Flask:
     """Create and configure an instance of the Flask application."""
     app = Flask(__name__)
     app.config.from_object(config[config_name])

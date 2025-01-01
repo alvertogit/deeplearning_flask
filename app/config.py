@@ -3,10 +3,12 @@ config.py: Configurations used by Flask server.
 """
 
 __author__ = "alvertogit"
-__copyright__ = "Copyright 2018-2024"
+__copyright__ = "Copyright 2018-2025"
 
 
 import os
+
+from flask import Flask
 
 
 class DefaultConfig:
@@ -21,7 +23,7 @@ class DefaultConfig:
     MODEL_PATH = os.environ.get("MODEL_PATH") or "/app/mnist_model.keras"
 
     @staticmethod
-    def init_app(app):
+    def init_app(app: Flask) -> None:
         """
         Initialize the application with the default configuration.
         """
@@ -37,7 +39,7 @@ class DevConfig(DefaultConfig):
     DEBUG = True
 
     @classmethod
-    def init_app(cls, app):
+    def init_app(cls, app: Flask) -> None:
         """
         Initialize the application with the development configuration.
         """
@@ -53,7 +55,7 @@ class TestConfig(DefaultConfig):
     TESTING = True
 
     @classmethod
-    def init_app(cls, app):
+    def init_app(cls, app: Flask) -> None:
         """
         Initialize the application with the testing configuration.
         """

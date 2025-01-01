@@ -3,13 +3,15 @@ test_app.py: It contents flask app tests.
 """
 
 __author__ = "alvertogit"
-__copyright__ = "Copyright 2018-2024"
+__copyright__ = "Copyright 2018-2025"
 
 
 import json
 
+from flask.testing import FlaskClient
 
-def test_index(client):
+
+def test_index(client: FlaskClient) -> None:
     """
     Test the index route.
 
@@ -26,7 +28,7 @@ def test_index(client):
     assert response.data == b"Deep Learning on Flask"
 
 
-def test_api(client):
+def test_api(client: FlaskClient) -> None:
     """
     Test the API endpoint to predict the label of an uploaded image with the Deep Learning model.
 

@@ -3,12 +3,12 @@ api.py: api views used by Flask server.
 """
 
 __author__ = "alvertogit"
-__copyright__ = "Copyright 2018-2024"
+__copyright__ = "Copyright 2018-2025"
 
 
 import io
 
-from flask import Blueprint, jsonify, request
+from flask import Blueprint, Response, jsonify, request
 from skimage.io import imread
 
 from .model import current_app, np, preprocess_image
@@ -17,7 +17,7 @@ api = Blueprint("api", __name__)
 
 
 @api.route("/predictlabel", methods=["POST"])
-def predict():
+def predict() -> Response:
     """
     Predict the label of an uploaded image with the Deep Learning model.
 

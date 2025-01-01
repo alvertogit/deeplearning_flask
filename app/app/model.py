@@ -3,16 +3,17 @@ model.py: Functions related to Deep Learning model based on Keras.
 """
 
 __author__ = "alvertogit"
-__copyright__ = "Copyright 2018-2024"
+__copyright__ = "Copyright 2018-2025"
 
 
 import numpy as np
 from flask import current_app
 from skimage import transform, util
+from tensorflow.keras import Model
 from tensorflow.keras.models import load_model
 
 
-def init_model():
+def init_model() -> Model:
     """
     Load the pre-trained Deep Learning model.
 
@@ -25,7 +26,7 @@ def init_model():
     return model
 
 
-def preprocess_image(image):
+def preprocess_image(image: np.ndarray) -> np.ndarray:
     """
     Preprocess an image for the Deep Learning model.
 

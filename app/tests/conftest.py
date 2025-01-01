@@ -3,16 +3,18 @@ conftest.py: It contents fixture functions used in tests.
 """
 
 __author__ = "alvertogit"
-__copyright__ = "Copyright 2018-2024"
+__copyright__ = "Copyright 2018-2025"
 
 
 import pytest
+from flask import Flask
+from flask.testing import FlaskClient
 
 from app import create_app
 
 
 @pytest.fixture
-def app():
+def app() -> Flask:
     """
     Create a Flask app instance for testing.
 
@@ -25,7 +27,7 @@ def app():
 
 
 @pytest.fixture
-def client(app):
+def client(app: Flask) -> FlaskClient:
     """
     Create a Flask test client for the app.
 
