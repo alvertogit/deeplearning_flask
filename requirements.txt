@@ -1,11 +1,11 @@
 Flask==3.1.0
 gunicorn==23.0.0
 numpy==2.0.2
-Pillow==11.0.0
+Pillow==11.1.0
 pre-commit==4.0.1
 pur==7.3.3
 pytest==8.3.4
 requests==2.32.3
-ruff==0.8.4
+ruff==0.8.6
 scikit-image==0.25.0
 tensorflow==2.18.0
