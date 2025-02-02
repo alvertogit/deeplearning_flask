@@ -6,6 +6,6 @@ pre-commit==4.1.0
 pur==7.3.3
 pytest==8.3.4
 requests==2.32.3
-ruff==0.9.3
-scikit-image==0.25.0
+ruff==0.9.4
+scikit-image==0.25.1
 tensorflow==2.18.0
