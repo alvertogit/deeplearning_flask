@@ -21,7 +21,7 @@ The goal is to deploy on [Flask] a [Deep Learning] model as a microservice. The 
 The code has been tested using:
 
 - [Python] (3.12): an interpreted high-level programming language for general-purpose programming.
-- [Jupyter Lab] (4.3): a web-based interactive development environment for [Jupyter Notebooks], code and data.
+- [Jupyter Lab] (4.4): a web-based interactive development environment for [Jupyter Notebooks], code and data.
 - [Flask] (3.1): a microframework for [Python] based on Werkzeug, Jinja 2 and good intentions.
 - [Gunicorn] (23.0): a [Python] [WSGI] HTTP Server for UNIX.
 - [NGINX] (1.27): a free, open-source, high-performance HTTP server, reverse proxy, and IMAP/POP3 proxy server.
@@ -44,7 +44,7 @@ Command to configure virtual environment with [venv]:
 ~/deeplearning_flask$ python3 -m venv .venv
 ~/deeplearning_flask$ source .venv/bin/activate
 (.venv)~/deeplearning_flask$ python3 -m pip install pip==25.0.1
-(.venv)~/deeplearning_flask$ python3 -m pip install setuptools==77.0.3
+(.venv)~/deeplearning_flask$ python3 -m pip install setuptools==78.1.0
 (.venv)~/deeplearning_flask$ python3 -m pip install -r requirements_dev.txt
 (.venv)~/deeplearning_flask$ pre-commit install
 ```
