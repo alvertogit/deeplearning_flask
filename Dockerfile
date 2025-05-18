@@ -9,7 +9,7 @@ WORKDIR /app
 COPY requirements.txt /app
 RUN python3 -m venv .
 RUN python3 -m pip install pip==25.1.1
-RUN python3 -m pip install setuptools==80.4.0
+RUN python3 -m pip install setuptools==80.7.1
 RUN python3 -m pip install --no-cache-dir -r requirements.txt
 COPY ./app /app
 EXPOSE 5000
