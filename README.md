@@ -21,7 +21,7 @@ The goal is to deploy on [Flask] a [Deep Learning] model as a microservice. The 
 The code has been tested using:
 
 - [Python] (3.12): an interpreted high-level programming language for general-purpose programming.
-- [Jupyter Lab] (4.4): a web-based interactive development environment for [Jupyter Notebooks], code and data.
+- [Jupyter Lab] (4.5): a web-based interactive development environment for [Jupyter Notebooks], code and data.
 - [Flask] (3.1): a microframework for [Python] based on Werkzeug, Jinja 2 and good intentions.
 - [Gunicorn] (23.0): a [Python] [WSGI] HTTP Server for UNIX.
 - [NGINX] (1.29): a free, open-source, high-performance HTTP server, reverse proxy, and IMAP/POP3 proxy server.
@@ -159,7 +159,7 @@ It is possible to execute tests of [Flask] microservice created with [pytest] fr
 ~/deeplearning_flask$ docker exec -it deeplearning_flask-web-1 /bin/bash
 ~/app# make test
 ...
-============================= test session starts ==============================platform linux -- Python 3.12.12, pytest-9.0.0, pluggy-1.6.0
+============================= test session starts ==============================platform linux -- Python 3.12.12, pytest-9.0.1, pluggy-1.6.0
 rootdir: /app/tests
 collected 2 items
 
