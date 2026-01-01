@@ -3,7 +3,7 @@ test_app.py: It contents flask app tests.
 """
 
 __author__ = "alvertogit"
-__copyright__ = "Copyright 2018-2025"
+__copyright__ = "Copyright 2018-2026"
 
 
 import json

@@ -226,7 +226,7 @@ A POST example using [curl] from outside [Docker] container is shown below:
 ## CREDITS
 
 author: alvertogit
-copyright: 2018-2025
+copyright: 2018-2026
 
 [Python]: https://www.python.org/
 [Flask]: https://flask.palletsprojects.com/en/1.1.x/

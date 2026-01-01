@@ -3,7 +3,7 @@ api.py: api views used by Flask server.
 """
 
 __author__ = "alvertogit"
-__copyright__ = "Copyright 2018-2025"
+__copyright__ = "Copyright 2018-2026"
 
 
 import io
