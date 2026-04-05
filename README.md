@@ -23,7 +23,7 @@ The code has been tested using:
 - [Python] (3.12): an interpreted high-level programming language for general-purpose programming.
 - [Jupyter Lab] (4.5): a web-based interactive development environment for [Jupyter Notebooks], code and data.
 - [Flask] (3.1): a microframework for [Python] based on Werkzeug, Jinja 2 and good intentions.
-- [Gunicorn] (25.1): a [Python] [WSGI] HTTP Server for UNIX.
+- [Gunicorn] (25.3): a [Python] [WSGI] HTTP Server for UNIX.
 - [NGINX] (1.29): a free, open-source, high-performance HTTP server, reverse proxy, and IMAP/POP3 proxy server.
 - [Docker] (28.5): an open platform for developers and sysadmins to build, ship, and run distributed applications, whether on laptops, data center VMs, or the cloud.
 - [Docker Compose] (2.40): a tool for defining and running multi-container [Docker] applications.
@@ -159,7 +159,7 @@ It is possible to execute tests of [Flask] microservice created with [pytest] fr
 ~/deeplearning_flask$ docker exec -it deeplearning_flask-web-1 /bin/bash
 ~/app# make test
 ...
-============================= test session starts ==============================platform linux -- Python 3.12.12, pytest-9.0.2, pluggy-1.6.0
+============================= test session starts ==============================platform linux -- Python 3.12.13, pytest-9.0.2, pluggy-1.6.0
 rootdir: /app/tests
 collected 2 items
 
