@@ -37,7 +37,7 @@ def test_api(client: FlaskClient) -> None:
     """
 
     # server REST API endpoint url and example image path
-    SERVER_URL = "http://127.0.0.1:5000/api/predictlabel"
+    SERVER_URL = "/api/predictlabel"
     IMAGE_PATH = "../app/static/4.jpg"
 
     # create payload with image for request
