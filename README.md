@@ -21,7 +21,7 @@ The goal is to deploy on [Flask] a [Deep Learning] model as a microservice. The 
 The code has been tested using:
 
 - [Python] (3.12): an interpreted high-level programming language for general-purpose programming.
-- [Jupyter Lab] (4.5): a web-based interactive development environment for [Jupyter Notebooks], code and data.
+- [Jupyter Lab] (4.6): a web-based interactive development environment for [Jupyter Notebooks], code and data.
 - [Flask] (3.1): a microframework for [Python] based on Werkzeug, Jinja 2 and good intentions.
 - [Gunicorn] (26.0): a [Python] [WSGI] HTTP Server for UNIX.
 - [NGINX] (1.31): a free, open-source, high-performance HTTP server, reverse proxy, and IMAP/POP3 proxy server.
@@ -29,7 +29,7 @@ The code has been tested using:
 - [Docker Compose] (2.40): a tool for defining and running multi-container [Docker] applications.
 - [Keras] ([TensorFlow] built-in): a high-level neural networks API, written in [Python] and capable of running on top of [TensorFlow].
 - [TensorFlow] (2.21): an open source software [Deep Learning] library for high performance numerical computation using data flow graphs.
-- [Matplotlib] (3.10): a plotting library for [Python] and its numerical mathematics extension [NumPy].
+- [Matplotlib] (3.11): a plotting library for [Python] and its numerical mathematics extension [NumPy].
 - [NumPy] (2.4): a library for [Python], adding support for large, multi-dimensional arrays and matrices, along with a large collection of high-level mathematical functions to operate on these arrays.
 - [Ruff] (0.15): An extremely fast Python linter and code formatter, written in Rust.
 - [scikit-image] (0.26): a collection of algorithms for image processing with [Python].
@@ -159,7 +159,7 @@ It is possible to execute tests of [Flask] microservice created with [pytest] fr
 ~/deeplearning_flask$ docker exec -it deeplearning_flask-web-1 /bin/bash
 ~/app# make test
 ...
-============================= test session starts ==============================platform linux -- Python 3.12.13, pytest-9.0.3, pluggy-1.6.0
+============================= test session starts ==============================platform linux -- Python 3.12.13, pytest-9.1.1, pluggy-1.6.0
 rootdir: /app/tests
 collected 2 items
 
