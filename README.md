@@ -31,7 +31,7 @@ The code has been tested using:
 - [TensorFlow] (2.21): an open source software [Deep Learning] library for high performance numerical computation using data flow graphs.
 - [Matplotlib] (3.11): a plotting library for [Python] and its numerical mathematics extension [NumPy].
 - [NumPy] (2.4): a library for [Python], adding support for large, multi-dimensional arrays and matrices, along with a large collection of high-level mathematical functions to operate on these arrays.
-- [Ruff] (0.15): An extremely fast Python linter and code formatter, written in Rust.
+- [Ruff] (0.16): An extremely fast Python linter and code formatter, written in Rust.
 - [scikit-image] (0.26): a collection of algorithms for image processing with [Python].
 
 ### PYTHON VIRTUAL ENVIRONMENT
