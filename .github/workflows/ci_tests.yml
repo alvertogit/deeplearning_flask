@@ -10,14 +10,14 @@ jobs:
         python: [ "3.12" ]
 
     steps:
-      - uses: actions/checkout@v5
+      - uses: actions/checkout@v7
       - name: Load .env file
         uses: xom9ikk/dotenv@v2.4.0
         with:
           path: .
           mode: test
       - name: Setup python ${{ matrix.python }}
-        uses: actions/setup-python@6
+        uses: actions/setup-python@7
         with:
           python-version: ${{ matrix.python }}
       - name: Install dependencies
