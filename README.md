@@ -36,17 +36,13 @@ The code has been tested using:
 
 ### PYTHON VIRTUAL ENVIRONMENT
 
-Virtual environment (<env_name>=**.venv**) can be generated from **requirements_dev.txt** file located in the repository.
+Virtual environment **.venv** can be created and configured from the **pyproject.toml** file located in the repository using Makefile.
 
-Command to configure virtual environment with [venv]:
+Command to configure virtual environment with [uv]:
 
 ```bash
-~/deeplearning_flask$ python3 -m venv .venv
-~/deeplearning_flask$ source .venv/bin/activate
-(.venv)~/deeplearning_flask$ python3 -m pip install pip==26.2.1
-(.venv)~/deeplearning_flask$ python3 -m pip install setuptools==84.0.0
-(.venv)~/deeplearning_flask$ python3 -m pip install -r requirements_dev.txt
-(.venv)~/deeplearning_flask$ pre-commit install
+~/deeplearning_flask$ uv sync --extra dev
+~/deeplearning_flask$ uv run pre-commit install
 ```
 
 ## REPOSITORY CONTENT
@@ -62,6 +58,7 @@ deeplearning_flask
 │       └── ci_tests.yml
 ├── .gitignore
 ├── .pre-commit-config.yaml
+├── .python-version
 ├── app
 │   ├── app
 │   │   ├── __init__.py
@@ -87,8 +84,7 @@ deeplearning_flask
 │       └── local.conf
 ├── pyproject.toml
 ├── README.md
-├── requirements.txt
-└── requirements_dev.txt
+└── uv.lock
 ```
 
 ## ARCHITECTURE
@@ -114,7 +110,7 @@ flowchart LR;
 The definition and training of the [Deep Learning] MNIST model was done through a notebook in [Jupyter Lab]. The employed notebook is stored in the main folder, to run it use the command shown below:
 
 ```bash
-(.venv)~/deeplearning_flask$ jupyter lab Deep\ Learning\ MNIST\ prediction\ model\ with\ Keras.ipynb
+~/deeplearning_flask$ uv run jupyter lab Deep\ Learning\ MNIST\ prediction\ model\ with\ Keras.ipynb
 ```
 
 ## HOW TO RUN DEEP LEARNING ON FLASK WITH DOCKER COMPOSE
@@ -159,8 +155,11 @@ It is possible to execute tests of [Flask] microservice created with [pytest] fr
 ~/deeplearning_flask$ docker exec -it deeplearning_flask-web-1 /bin/bash
 ~/app# make test
 ...
-============================= test session starts ==============================platform linux -- Python 3.12.13, pytest-9.1.1, pluggy-1.6.0
-rootdir: /app/tests
+============================= test session starts ==============================
+platform linux -- Python 3.12.15, pytest-9.1.1, pluggy-1.7.0
+rootdir: /app
+configfile: pyproject.toml
+plugins: anyio-4.15.1, platformdirs-4.13.4
 collected 2 items
 
 test_app.py ..                                                           [100%]
@@ -238,7 +237,6 @@ copyright: 2018-2026
 [REST API]: https://en.wikipedia.org/wiki/Representational_state_transfer
 [GitHub Actions]: https://github.com/features/actions
 [Docker Compose]: https://github.com/docker/compose
-[venv]: https://docs.python.org/3/library/venv.html
 [Jupyter Lab]: https://jupyter.org/
 [Jupyter Notebook]: https://jupyter.org/
 [Jupyter Notebooks]: https://jupyter.org/
@@ -252,3 +250,4 @@ copyright: 2018-2026
 [pytest]: https://docs.pytest.org/en/latest/
 [Makefile]: https://en.wikipedia.org/wiki/Makefile
 [Ruff]: https://docs.astral.sh/ruff/
+[uv]: https://docs.astral.sh/uv/

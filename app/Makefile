@@ -4,4 +4,4 @@ default: test
 
 test:
 	cd tests \
-	&& pytest
+	&& uv run pytest
