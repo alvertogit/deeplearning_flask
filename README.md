@@ -152,11 +152,11 @@ The web browser should show the text "Deep Learning on Flask".
 It is possible to execute tests of [Flask] microservice created with [pytest] from inside the [Flask] [Docker] container using [Makefile]:
 
 ```bash
-~/deeplearning_flask$ docker exec -it deeplearning_flask-web-1 /bin/bash
+~/deeplearning_flask$ docker compose exec web bash
 ~/app# make test
 ...
 ============================= test session starts ==============================
-platform linux -- Python 3.12.15, pytest-9.1.1, pluggy-1.7.0
+platform linux -- Python 3.12.16, pytest-9.2.0, pluggy-1.7.0
 rootdir: /app
 configfile: pyproject.toml
 plugins: anyio-4.15.1, platformdirs-4.13.4
