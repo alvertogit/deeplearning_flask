@@ -23,10 +23,10 @@ The code has been tested using:
 - [Python] (3.12): an interpreted high-level programming language for general-purpose programming.
 - [Jupyter Lab] (4.6): a web-based interactive development environment for [Jupyter Notebooks], code and data.
 - [Flask] (3.1): a microframework for [Python] based on Werkzeug, Jinja 2 and good intentions.
-- [Gunicorn] (26.2): a [Python] [WSGI] HTTP Server for UNIX.
+- [Gunicorn] (27.0): a [Python] [WSGI] HTTP Server for UNIX.
 - [NGINX] (1.31): a free, open-source, high-performance HTTP server, reverse proxy, and IMAP/POP3 proxy server.
 - [Docker] (29.9): an open platform for developers and sysadmins to build, ship, and run distributed applications, whether on laptops, data center VMs, or the cloud.
-- [Docker Compose] (5.6): a tool for defining and running multi-container [Docker] applications.
+- [Docker Compose] (5.7): a tool for defining and running multi-container [Docker] applications.
 - [Keras] ([TensorFlow] built-in): a high-level neural networks API, written in [Python] and capable of running on top of [TensorFlow].
 - [TensorFlow] (2.21): an open source software [Deep Learning] library for high performance numerical computation using data flow graphs.
 - [Matplotlib] (3.11): a plotting library for [Python] and its numerical mathematics extension [NumPy].
